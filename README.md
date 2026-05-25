@@ -1,7 +1,7 @@
 
-  # Film-themed UX portfolio website
+  # Portfolio Website
 
-  This is a code bundle for Film-themed UX portfolio website. The original project is available at https://www.figma.com/design/yzJ2ToWjLZ3tvXmMLbhnaN/Film-themed-UX-portfolio-website.
+  This is a code bundle for Portfolio Website. The original project is available at https://www.figma.com/design/yzJ2ToWjLZ3tvXmMLbhnaN/Portfolio-Website.
 
   ## Running the code
 
