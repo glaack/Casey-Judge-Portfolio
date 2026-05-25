@@ -34,23 +34,21 @@ export function Contact() {
                 className="text-base leading-relaxed mb-6"
                 style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#bbb" }}
               >
-                Whether you're looking for a research partner, a collaborator, or just want to talk shop — I'd love to hear from you.
+                If you're looking for a research partner, a collaborator, or just want to talk shop, I'd love to hear from you.
               </p>
 
               <p
                 className="text-base leading-relaxed mb-6"
                 style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#bbb" }}
               >
-                I'm particularly interested in projects where research can make a real strategic impact — whether that's validating a new product direction, uncovering unmet user needs, or helping teams make confident decisions under uncertainty.
+                I'm particularly interested in projects where research can make a real strategic impact. I work best with teams that value curiosity, flexibility, and collaboration.
               </p>
-
               <p
-                className="text-base leading-relaxed mb-8"
+                className="text-base leading-relaxed mb-6"
                 style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#bbb" }}
               >
-                I work best with teams that value curiosity, flexibility, and collaboration. If you're building something meaningful and want a research partner who can shed light on the complexities of the problem space, let's connect.
-              </p>
-
+              If you're building something meaningful and want a research partner who can shed light on the complexities of the problem space, let's connect.
+            </p>
               <a
                 href="mailto:chicory-samba-0x@icloud.com"
                 className="inline-flex items-center gap-2 px-5 py-3 text-sm tracking-widest uppercase transition-all duration-200 hover:gap-3"

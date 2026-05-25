@@ -175,7 +175,7 @@ export function About() {
                 className="leading-relaxed"
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",
-                  color: "#777",
+                  color: "#bbb",
                   fontSize: "0.95rem",
                 }}
               >I'm a design researcher at <a href="https://www.wetafx.co.nz/" target="_blank" rel="noopener noreferrer" style={{ color: "#999", textDecoration: "underline", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#5BBF45")} onMouseLeave={(e) => (e.currentTarget.style.color = "#999")}>Wētā FX</a>, and an adjunct professor in the <a href="https://engineering.nyu.edu/academics/programs/integrated-design-media-ms" target="_blank" rel="noopener noreferrer" style={{ color: "#999", textDecoration: "underline", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#5BBF45")} onMouseLeave={(e) => (e.currentTarget.style.color = "#999")}>Integrated Design and Media</a> and <a href="https://engineering.nyu.edu" target="_blank" rel="noopener noreferrer" style={{ color: "#999", textDecoration: "underline", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#5BBF45")} onMouseLeave={(e) => (e.currentTarget.style.color = "#999")}>General Engineering</a> departments at New York University.</p>
@@ -183,7 +183,7 @@ export function About() {
                 className="leading-relaxed"
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",
-                  color: "#777",
+                  color: "#bbb",
                   fontSize: "0.95rem",
                 }}
               >I'm curious about how people perceive the world around them, and I leverage that curiosity to build better user experiences.</p>
@@ -191,7 +191,7 @@ export function About() {
                 className="leading-relaxed"
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",
-                  color: "#777",
+                  color: "#bbb",
                   fontSize: "0.95rem",
                 }}
               >I can't talk too much about what I do <a href="https://www.imdb.com/name/nm6516608/" target="_blank" rel="noopener noreferrer" style={{ color: "#999", textDecoration: "underline", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#5BBF45")} onMouseLeave={(e) => (e.currentTarget.style.color = "#999")}>behind the scenes</a>, but you can reach out to me via <a href="mailto:chicory-samba-0x@icloud.com" style={{ color: "#999", textDecoration: "underline", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#5BBF45")} onMouseLeave={(e) => (e.currentTarget.style.color = "#999")}>email</a> or connect with me on <a href="https://linkedin.com/in/acacia-judge" target="_blank" rel="noopener noreferrer" style={{ color: "#999", textDecoration: "underline", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#5BBF45")} onMouseLeave={(e) => (e.currentTarget.style.color = "#999")}>LinkedIn</a> if you want to chat.</p>
