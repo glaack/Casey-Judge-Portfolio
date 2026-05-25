@@ -34,7 +34,6 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    minify: 'terser',
   },
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
