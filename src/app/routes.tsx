@@ -74,5 +74,5 @@ export const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: '/PortfolioWebsite/' }
+  { basename: '/Casey-Judge-Portfolio/' }
 );
