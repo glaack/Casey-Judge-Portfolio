@@ -59,20 +59,17 @@ function NotFound() {
   );
 }
 
-export const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      Component: Root,
-      children: [
-        { index: true, Component: Home },
-        { path: "work", Component: Work },
-        { path: "work/:id", Component: CaseStudyDetail },
-        { path: "about", Component: About },
-        { path: "contact", Component: Contact },
-        { path: "*", Component: NotFound },
-      ],
-    },
-  ],
-  { basename: '/Casey-Judge-Portfolio/' }
-);
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: Root,
+    children: [
+      { index: true, Component: Home },
+      { path: "work", Component: Work },
+      { path: "work/:id", Component: CaseStudyDetail },
+      { path: "about", Component: About },
+      { path: "contact", Component: Contact },
+      { path: "*", Component: NotFound },
+    ],
+  },
+]);
