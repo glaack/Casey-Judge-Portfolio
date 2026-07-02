@@ -768,7 +768,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "Overview",
         content: [
           "I work as an embedded UX research consultant across a portfolio of professional software tools built for visual effects artists - people who create the imagery behind major feature films, streaming series, and commercial productions. These are tools used daily by some of the most technically sophisticated users in any industry.",
-          "Rather than being attached to a single product team, I operate as an internal consultant — moving across projects based on where research expertise will have the greatest impact. This means I'm often parachuting into work mid-stream, orienting quickly, and delivering clear direction under time pressure.",
+          "Rather than being attached to a single product team, I operate as an internal consultant where I move across projects based on where research expertise will have the greatest impact. This means I'm often jumping into work mid-stream, orienting quickly, and delivering clear direction under time pressure.",
         ],
       },
       { type: "divider" },
