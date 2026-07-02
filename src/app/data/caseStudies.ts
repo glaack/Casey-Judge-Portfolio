@@ -767,7 +767,7 @@ export const caseStudies: CaseStudy[] = [
         type: "text",
         heading: "Overview",
         content: [
-          "I work as an embedded UX research consultant across a portfolio of professional software tools built for visual effects artists — people who create the imagery behind major feature films, streaming series, and commercial productions. These are tools used daily by some of the most technically sophisticated users in any industry.",
+          "I work as an embedded UX research consultant across a portfolio of professional software tools built for visual effects artists - people who create the imagery behind major feature films, streaming series, and commercial productions. These are tools used daily by some of the most technically sophisticated users in any industry.",
           "Rather than being attached to a single product team, I operate as an internal consultant — moving across projects based on where research expertise will have the greatest impact. This means I'm often parachuting into work mid-stream, orienting quickly, and delivering clear direction under time pressure.",
         ],
       },
@@ -777,7 +777,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "The Domain",
         content: [
           "VFX production software occupies a rare position in the software landscape: the users are world-class experts. Artists and technical directors working at this level have spent years, often decades, building deep fluency with their tools. They have strong opinions, well-established workflows, and little patience for friction.",
-          "The cost of a bad design decision in this context isn't just frustration — it's lost hours on productions where time is measured in thousands of dollars per day. This makes research here both high-stakes and uniquely rewarding. When a change lands well, it improves the working lives of people doing some of the most skilled craft work in the industry.",
+          "The cost of a bad design decision in this context isn't the typical customer frustration - it potentially means many lost hours on productions where time is measured in thousands of dollars per day. This makes research here both high-stakes and uniquely rewarding. When a change lands well, it improves the working lives of people doing some of the most skilled craft work in the industry.",
         ],
       },
       { type: "divider" },
@@ -785,8 +785,8 @@ export const caseStudies: CaseStudy[] = [
         type: "text",
         heading: "My Role",
         content: [
-          "I function as an in-house UX consultant — not embedded in a single team, but available across multiple concurrent projects. This requires earning trust quickly with different groups of stakeholders, calibrating my research approach to widely varying timelines and contexts, and knowing when to go deep versus when to synthesize fast and move on.",
-          "In practice, this looks like: joining a product team early in discovery to help frame the right research questions; running sessions with artists directly; synthesizing findings into clear, actionable direction for designers and engineers; and returning later to evaluate whether that direction held up.",
+          "I function as an in-house UX consultant. I'm not embedded in a single team, but am available across multiple concurrent projects. This requires earning trust quickly with different groups of stakeholders, calibrating my research approach to widely varying timelines and contexts, and knowing when to go deep versus when to synthesize fast and move on.",
+          "In practice, this means joining a product team early in discovery to help frame the right research questions; running sessions with artists directly; synthesizing findings into clear, actionable direction for designers and engineers; and returning later to evaluate whether that direction held up.",
         ],
       },
       { type: "divider" },
@@ -794,8 +794,8 @@ export const caseStudies: CaseStudy[] = [
         type: "text",
         heading: "Designing for Expert Users",
         content: [
-          "Most UX norms are built around general users — people who are learning a product, may use it infrequently, and need to be guided. Expert users are different in almost every meaningful way: they have years of muscle memory, they've already optimized their environment around their existing workflow, they'll immediately notice when something familiar has been moved, and they'll form a strong opinion about why.",
-          "Research with expert users requires a different posture. You're not just observing — you're trying to understand a practice. The goal is to earn enough trust that someone with 15 years of experience will tell you where the real friction is, not just what they think you want to hear.",
+          "Most UX norms are built around general users - people who are learning a product, may use it infrequently, and need to be guided. Expert users are different in almost every meaningful way: they have years of muscle memory, they've already optimized their environment around their existing workflow, they'll immediately notice when something familiar has been moved, and they'll form a strong opinion about why.",
+          "Research with expert users requires a different posture. You're not just observing, you're trying to understand a practice. The goal is to earn enough trust that someone with 15 years of experience will tell you where the real friction is, not just what they think you want to hear.",
         ],
       },
       { type: "divider" },
@@ -803,15 +803,15 @@ export const caseStudies: CaseStudy[] = [
         type: "text",
         heading: "What I Bring",
         content:
-          "Across engagements I draw on contextual inquiry to observe artists working in their natural environment, expert interviews to surface latent needs and surface-level workarounds, workflow mapping to identify where tools break down across a production pipeline, heuristic evaluation to quickly assess new features before they reach users, and think-aloud sessions to watch decision-making in real time. The method always follows the question — not the other way around.",
+          "Across engagements I draw on contextual inquiry to observe artists working in their natural environment, expert interviews to surface latent needs and surface-level workarounds, workflow mapping to identify where tools break down across a production pipeline, heuristic evaluation to quickly assess new features before they reach users, and think-aloud sessions to watch decision-making in real time.",
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Why This Work Matters",
         content: [
-          "The VFX industry is undergoing significant technological change — AI-assisted tooling, cloud-based pipelines, and real-time rendering are reshaping how productions are made. The professionals navigating this shift are being asked to adapt rapidly, often with tools that weren't designed with their existing workflows in mind.",
-          "Good research in this space doesn't just make software easier to use — it helps ensure that the people who do this work aren't left behind by the tools meant to serve them.",
+          "The VFX industry is undergoing significant technological change - AI-assisted tooling, cloud-based pipelines, and real-time rendering - reshaping how productions are made. The professionals navigating this shift are being asked to adapt rapidly, often with tools that weren't designed with their existing workflows in mind.",
+          "Good research in this space helps ensure that the people who do VFX work aren't left behind by the tools meant to serve them.",
         ],
       },
     ],
