@@ -728,7 +728,6 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "vfx-software",
-    password: "supersecretpassword",
     title: "UX Research for VFX Software",
     subtitle:
       "Ongoing UX research for professional VFX tooling",
@@ -754,7 +753,7 @@ export const caseStudies: CaseStudy[] = [
         type: "callout",
         heading: "Confidentiality Notice",
         content:
-          "This work is covered by a non-disclosure agreement. Project names, client details, specific findings, and deliverables cannot be shared. What follows describes my role, approach, and the nature of the work in general terms.",
+          "My current work is covered by a non-disclosure agreement. Project names, client details, specific findings, and deliverables cannot be shared. What follows describes my role, approach, and the nature of the work in general terms.",
         variant: "default",
       },
       {
