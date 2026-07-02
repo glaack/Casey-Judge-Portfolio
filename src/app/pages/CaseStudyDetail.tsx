@@ -167,26 +167,36 @@ function SectionRenderer({ section, index }: { section: SectionType; index: numb
         );
       }
 
-      const colWidth = section.columns === 3 ? "md:w-1/3" : "md:w-1/2";
+      const colWidth = section.columns === 4 ? "md:w-1/4" : section.columns === 3 ? "md:w-1/3" : "md:w-1/2";
+      const numCols = section.widths ? section.images.length : (section.columns ?? 2);
+      const gridCols = section.widths
+        ? section.widths.join(" ")
+        : `repeat(${numCols}, 1fr)`;
       return (
-        <div className="my-12 flex flex-col md:flex-row items-end gap-6" key={index}>
+        <div
+          className="my-12"
+          style={{ display: "grid", gridTemplateColumns: gridCols, gridTemplateRows: "1fr auto", gap: "0 1.5rem" }}
+          key={index}
+        >
+          {/* Row 1: images, all bottoms aligned */}
           {section.images.map((img, i) => (
-            <div key={i} className={`flex flex-col w-full ${section.widths ? "" : colWidth}`} style={section.widths ? { width: section.widths[i] } : {}}>
-              <div
-                className="w-full overflow-hidden"
-                style={{ backgroundColor: "#0e0e0e", border: "1px solid #333", ...(section.imageHeight ? { height: section.imageHeight } : {}) }}
-              >
-                <ImageWithFallback
-                  src={img.url}
-                  alt={img.caption || ""}
-                  className={`w-full ${section.imageHeight ? "h-full object-cover" : "h-auto"}`}
-                />
-              </div>
+            <div
+              key={`img-${i}`}
+              className="w-full overflow-hidden self-end"
+              style={{ backgroundColor: "#0e0e0e", border: "1px solid #333", ...(section.imageHeight ? { height: section.imageHeight } : {}) }}
+            >
+              <ImageWithFallback
+                src={img.url}
+                alt={img.caption || ""}
+                className={`w-full ${section.imageHeight ? "h-full object-cover" : "h-auto"}`}
+              />
+            </div>
+          ))}
+          {/* Row 2: captions */}
+          {section.images.map((img, i) => (
+            <div key={`cap-${i}`} className="mt-3">
               {img.caption && (
-                <p
-                  className="text-xs mt-3"
-                  style={{ fontFamily: "'Space Mono', monospace", color: "#777" }}
-                >
+                <p className="text-xs" style={{ fontFamily: "'Space Mono', monospace", color: "#777" }}>
                   {img.caption}
                 </p>
               )}

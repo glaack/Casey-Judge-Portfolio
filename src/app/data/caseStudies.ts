@@ -71,7 +71,7 @@ export type SectionType =
   | {
       type: "image-grid";
       images: Array<{ url: string; caption?: string }>;
-      columns?: 2 | 3;
+      columns?: 2 | 3 | 4;
       layout?: "default" | "device";
       imageHeight?: string;
       widths?: string[];
@@ -140,7 +140,7 @@ export const caseStudies: CaseStudy[] = [
         type: "image-grid",
         images: [
           { url: uncannyValleyRobot, caption: "An early example of the uncanny valley: a humanoid robot" },
-          { url: polarExpressCreepy, caption: "A character from The Polar Express" },
+          { url: polarExpressCreepy, caption: "An uncanny character from The Polar Express" },
         ],
         columns: 2,
         imageHeight: "320px",
@@ -150,7 +150,7 @@ export const caseStudies: CaseStudy[] = [
         type: "text",
         heading: "The Uncanny Valley",
         content:
-          "The theory holds that as artificial human renderings approach realism, they reach a point that triggers strongly negative emotional responses. The phenomenon was originally proposed by roboticist Masahiro Mori in 1970; the term \"uncanny valley\" was introduced through a Jasia Reichardt translation in 1978.",
+          "The theory proposes that as artificial human renderings approach realism, they reach a point that triggers strongly negative emotional responses. The phenomenon was originally proposed by roboticist Masahiro Mori in 1970; the term \"uncanny valley\" was introduced through a Jasia Reichardt translation in 1978.",
       },
       {
         type: "image",
@@ -164,7 +164,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "Facial Perception",
         content: [
           "Research shows that humans fixate on the eye region 40% of the time when viewing a forward-facing face (Janik et al., 1978). Chimpanzee eye-tracking studies (Hirata et al., 2010) confirmed this pattern extends across species — attention centered on the eyes even when faces were rotated or inverted.",
-          "If emotional connection flows primarily through the eyes, then eyes alone may be sufficient to trigger the uncanny valley response.",
+          "I hypothesized that if emotional connection flows primarily through the eyes, then eyes alone may be sufficient to trigger the uncanny valley response.",
         ],
       },
       {
@@ -218,13 +218,14 @@ export const caseStudies: CaseStudy[] = [
           { url: femaleFinal70, caption: "70% digital eye opacity" },
         ],
         columns: 3,
+        widths: ["35%", "30%", "35%"],
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Experiment 1",
         content:
-          "A local browser app built with p5.js displayed 11 looped 8-second videos in random order. Participants clicked one of five buttons to rate each clip — from \"I HATE this; this is not human\" to \"This is a human.\" A printed scale was placed over the keyboard; only the trackpad was used.",
+          "A local browser app built with p5.js displayed 11 looped 8-second videos in random order. Participants clicked one of five buttons to rate each clip — from \"I HATE this; this is not human\" to \"This is a human.\" A printed scale was placed over the keyboard; only the trackpad was used to navigate.",
       },
       {
         type: "image",
@@ -253,7 +254,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "Data Analysis",
         content: [
           "Ratings were converted to numerical values, averaged per image, and graphed against Mori's original uncanny valley curve. A notable pattern emerged: responses to earlier images in a session trended toward neutral, likely due to comparison effects from preceding stimuli.",
-          "Experiment 2 introduced a response-time graph. Individual data sheets showed higher response times and more neutral ratings on first-viewed images — expected to balance out across averaged trials.",
+          "Experiment 2 introduced a response-time graph. Individual data sheets showed higher response times and more neutral ratings on first-viewed images which were expected to balance out across averaged trials.",
         ],
       },
       {
@@ -278,7 +279,7 @@ export const caseStudies: CaseStudy[] = [
           "Digital eyes triggered the uncanny valley effect in both rounds of testing",
           "The uncanny turning point began at approximately 20% digital opacity",
           "At 70% digital opacity, responses were overwhelmingly negative in both image sets",
-          "Fast response times indicated the eye region alone drove humanness judgment without requiring full facial analysis",
+          "Fast response times indicated the eye region alone drove judgment of uncanniness without requiring full facial analysis",
         ],
       },
       {
@@ -326,20 +327,20 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "youtube",
         videoId: "2iB-f2j0Ems",
-        caption: "Unseen Media product demo",
+        caption: "Unseen Media product demo video",
       },
       { type: "divider" },
       {
         type: "text",
         heading: "My Role",
-        content: "I served as product designer and researcher — conducting customer interviews, leading competitive analysis, designing AR interfaces, and iterating on the physical and digital product based on playtesting feedback.",
+        content: "I served as product designer and researcher, where I conducted customer interviews, lead competitive analysis, designed AR interfaces, and iterated on the physical and digital product based on playtesting feedback.",
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Customer Discovery",
         content: [
-          "We conducted 100+ interviews with potential customers to understand what they wanted from a mystery game experience. Our original escape room concept showed strong interest but limited scalability — testing quickly revealed that at-home mystery games had far better market reach.",
+          "We conducted 100+ interviews with potential customers to understand what they wanted from a mystery game experience. Our original escape room concept showed strong interest but limited scalability - testing quickly revealed that at-home mystery games had far better market reach.",
           "Interview notes were synthesized to identify the core values driving purchase decisions.",
         ],
       },
@@ -350,6 +351,7 @@ export const caseStudies: CaseStudy[] = [
           { url: unseenNotes2, caption: "Individual participant profile" },
         ],
         columns: 2,
+        widths: ["45%", "55%"],
       },
       {
         type: "callout",
@@ -399,8 +401,8 @@ export const caseStudies: CaseStudy[] = [
         type: "text",
         heading: "Designing for Augmented Reality",
         content: [
-          "AR was a emerging medium — many players encountered it for the first time through this product. Designing for it meant not just building intuitive interfaces, but actively educating users within the experience itself.",
-          "Our design principles: keep interactions simple, offer liberal on-screen text instructions whenever in doubt, and remind players that spatial movement — not pinching to zoom — is possible.",
+          "AR was a emerging medium that many players encountered it for the first time through this product. Designing for it meant building intuitive interfaces and also actively educating users about AR within the experience itself.",
+          "Our design principles were: keep interactions simple, offer liberal on-screen text instructions whenever in doubt, and remind players that spatial movement — not just pinching to zoom — is possible in AR.",
         ],
       },
       { type: "divider" },
@@ -467,71 +469,58 @@ export const caseStudies: CaseStudy[] = [
           { url: umDyatlov2, caption: "Dyatlov Files — box contents spread on tabletop" },
         ],
         columns: 2,
+        widths: ["33%", "67%"],
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Interface Mockups for AR",
         content: [
-          "Designing AR wireframes presented unique challenges — traditional static wireframing couldn't capture spatial interaction and motion. This required heavier visual communication and close collaboration with developers.",
-          "A key principle: draw from real-world names and metaphors (hacking tools, scanning devices) to ease users into unfamiliar AR interactions before introducing more abstract ones.",
+          "Designing AR wireframes presented unique challenges wherein traditional static wireframing couldn't capture spatial interaction and motion. This required heavier visual communication and close collaboration with developers.",
+          "A key principle was to draw from real-world names and metaphors (hacking tools, scanning devices) to ease users into unfamiliar AR interactions before introducing more abstract ones.",
         ],
       },
       {
         type: "image-grid",
         images: [
-          { url: umScrambled, caption: "AR app — scanning scrambled documents" },
-          { url: umUnscrambled, caption: "AR app — documents unscrambled" },
+          { url: umScrambled, caption: "Scanning scrambled documents" },
+          { url: umUnscrambled, caption: "Documents unscrambled" },
         ],
         columns: 2,
-      },
-      {
-        type: "image-grid",
-        images: [
-          { url: umTabletopAR1, caption: "iPhone AR scan — step 1" },
-          { url: umTabletopAR2, caption: "iPhone AR scan — step 2" },
-          { url: umTabletopAR3, caption: "iPhone AR scan — step 3" },
-        ],
-        columns: 3,
-      },
-      {
-        type: "image",
-        url: umTabletopAR4,
-        caption: "iPhone AR scan — step 4 (revealed content)",
-        layout: "half",
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Prototype Two: Charlotte Depsi",
         content: [
-          "We moved to a higher-fidelity boxed prototype, commissioned a professional writer for a more compelling mystery narrative, and partnered with 8th Wall to deliver web-based AR on any device — eliminating the Unity compatibility issues entirely.",
+          "We moved to a higher-fidelity boxed prototype, commissioned a professional writer for a more compelling mystery narrative, and partnered with 8th Wall to deliver web-based AR on any device which eliminated the Unity compatibility issues entirely.",
           "This version added multiple web puzzles, an Instagram profile for fictional character Angelica Greenstone, and the DSF Agency Agent Portal for tracking case progress.",
         ],
       },
       {
         type: "image-grid",
         images: [
-          { url: umAR1, caption: "Crime scene reconstruction AR — scan recognized" },
-          { url: umAR2, caption: "Crime scene reconstruction AR — tap to place" },
-          { url: umAR3, caption: "Crime scene reconstruction AR — 3D model placed" },
+          { url: umAR1, caption: "Scan recognized" },
+          { url: umAR2, caption: "Tap to place" },
+          { url: umAR3, caption: "3D model placed" },
         ],
         columns: 3,
       },
       {
         type: "image-grid",
         images: [
-          { url: umInstagram, caption: "Instagram profile — Angelica Greenstone (fictional character)" },
+          { url: umInstagram, caption: "Instagram profile — Angelica Greenstone" },
           { url: umAgentPortal, caption: "DSF Agency Agent Portal web interface" },
         ],
         columns: 2,
+        widths: ["57%", "43%"],
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Feedback from Demos and Conferences",
         content: [
-          "Through RLab connections we participated in multiple NYC AR/VR community events, running observed playtesting sessions at Halloween Play 2019 and other demos. A key lesson: separate excitement about the technology from genuine product evaluation.",
+          "Through RLab connections we participated in multiple NYC AR/VR community events, running observed playtesting sessions at Halloween Play 2019 and other demos. A key lesson was that we needed to separate excitement about the technology from genuine product evaluation.",
           "Our preferred method became unmoderated, closely observed sessions followed by in-depth interviews.",
         ],
       },
@@ -542,15 +531,15 @@ export const caseStudies: CaseStudy[] = [
           "Users defaulted to pinch-to-zoom rather than physically moving closer to AR objects",
           "Framing AR tools as CSI-style hacking devices significantly enhanced enjoyment",
           "Identified partnership opportunities with licensed content providers and educational institutions",
-          "A help modal was essential — users frequently needed guidance mid-AR-interaction",
+          "A help modal was essential as users frequently needed guidance mid-AR-interaction",
           "Clear written prompts consistently outperformed implicit navigational cues",
         ],
       },
       {
         type: "image-grid",
         images: [
-          { url: umEvent1, caption: "Unseen Media demo table — Halloween Play 2019" },
-          { url: umEvent2, caption: "Wider demo area — Halloween Play 2019" },
+          { url: umEvent1, caption: "Unseen Media demo table at Halloween Play 2019" },
+          { url: umEvent2, caption: "Wider demo area at Halloween Play 2019" },
         ],
         columns: 2,
       },
@@ -611,7 +600,7 @@ export const caseStudies: CaseStudy[] = [
         type: "text",
         heading: "My Role",
         content:
-          "UX researcher and project manager. I led competitive research, facilitated user testing sessions, synthesized findings, and coordinated platform decisions with the client and development team.",
+          "I served as a UX researcher and project manager. I led competitive research, facilitated user testing sessions, synthesized findings, and coordinated platform decisions with the client and development team.",
       },
       { type: "divider" },
       {
@@ -619,7 +608,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "Understanding the Client's Needs",
         content: [
           "The client had clear brand aspirations: the site needed to feel trustworthy, caring, science-rooted, and modern. They wanted a healthcare palette without feeling sterile or overly clinical.",
-          "Functionally, the requirements were demanding: cross-country e-commerce capability, a bilingual CMS supporting both English and Chinese, and the ability to handle both single-item purchases and large bulk hospital orders from one system.",
+          "Functionally, the requirements were demanding: cross-country e-commerce capability, a bilingual CMS supporting both English and Chinese, and the ability to handle both single-item purchases and large bulk orders from one system.",
         ],
       },
       { type: "divider" },
@@ -806,7 +795,7 @@ export const caseStudies: CaseStudy[] = [
         type: "text",
         heading: "Designing for Expert Users",
         content: [
-          "Most UX norms are built around general users — people who are learning a product, may use it infrequently, and need to be guided. Expert users are different in almost every meaningful way. They have years of muscle memory. They've already optimized their environment around their existing workflow. They'll immediately notice when something familiar has been moved, and they'll form a strong opinion about why.",
+          "Most UX norms are built around general users — people who are learning a product, may use it infrequently, and need to be guided. Expert users are different in almost every meaningful way: they have years of muscle memory, they've already optimized their environment around their existing workflow, they'll immediately notice when something familiar has been moved, and they'll form a strong opinion about why.",
           "Research with expert users requires a different posture. You're not just observing — you're trying to understand a practice. The goal is to earn enough trust that someone with 15 years of experience will tell you where the real friction is, not just what they think you want to hear.",
         ],
       },
