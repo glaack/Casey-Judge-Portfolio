@@ -1,7 +1,7 @@
 
-  # Casey Judge - Portfolio
+  # Portfolio Website
 
-  This is a code bundle for Casey Judge's Portfolio Website. The original project is available at https://www.figma.com/design/yzJ2ToWjLZ3tvXmMLbhnaN/Portfolio-Website.
+  This is a code bundle for Portfolio Website. The original project is available at https://www.figma.com/design/yzJ2ToWjLZ3tvXmMLbhnaN/Portfolio-Website.
 
   ## Running the code
 

@@ -39,7 +39,7 @@ export function Home() {
             height: "600px",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(91,191,69,0.06) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(91,191,69,0.22) 0%, transparent 70%)",
             top: "10%",
             right: "-100px",
           }}
@@ -132,7 +132,7 @@ export function Home() {
               >
                 I'm Casey Judge — a UX Researcher with over 8
                 years of experience in film & immersive
-                entertainment, turning natural human behavior
+                entertainment. I excel at turning natural human behavior
                 into clear design direction for innovative
                 tooling.
               </p>
@@ -292,7 +292,7 @@ export function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featured.map((study, i) => (
+          {featured.slice(0, 3).map((study, i) => (
             <CaseStudyCard
               key={study.id}
               study={study}
@@ -481,7 +481,6 @@ export function Home() {
         >
           Let's Make Something
           <br />
-          Worth{" "}
           <span
             style={{
               background:
@@ -491,13 +490,11 @@ export function Home() {
               backgroundClip: "text",
             }}
           >
-            {" "}
-            Experiencing
-          </span>
-          .
+            Worth Experiencing
+          </span>.
         </h2>
         <Link
-          to="/contact"
+          to="/about"
           className="inline-flex items-center gap-3 px-8 py-4 text-sm tracking-widest uppercase transition-all duration-200 hover:gap-4"
           style={{
             fontFamily: "'Space Mono', monospace",

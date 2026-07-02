@@ -1,18 +1,78 @@
+// Local image imports for Uncanny Valley thesis
+import facialRig from "../../imports/facial-rig.png";
+import facialTrackingChimps1 from "../../imports/facial-tracking-chimps-1.png";
+import facialTrackingChimps2 from "../../imports/facial-tracking-chimps-2.png";
+import facialTrackingHumans from "../../imports/facial-tracking-humans.png";
+import femaleFinal70 from "../../imports/female-final-70.png";
+import femaleOriginal from "../../imports/female-original.png";
+import femaleRatingLaptop from "../../imports/female-rating-laptop.jpg";
+import femaleRatingScreen from "../../imports/female-rating-screen.png";
+import femaleTestPercentages from "../../imports/Female-TestPercentages.png";
+import polarExpressCreepy from "../../imports/polar_express_creepy.jpg";
+import thesisHero from "../../imports/Thesis-Hero.png";
+import thesisHeader from "../../imports/Thesis-Header.png";
+import uncannyValleyRobot from "../../imports/uncanny-valley-robot.jpeg";
+import valleyGraph from "../../imports/Valley-Graph-Not-Transparent.png";
+import maleStartScreen from "../../imports/Male_StartScreen.png";
+import maleVideo from "../../imports/Male_Video.png";
+import results1 from "../../imports/results_1.png";
+import results21Rating from "../../imports/results_2.1.png";
+import results21Response from "../../imports/results-2.1.png";
+
+// Local image imports for Unseen Media case study
+import unseenImage36 from "../../imports/Image_36.png";
+import unseenNotes1 from "../../imports/notes_1.png";
+import unseenNotes2 from "../../imports/notes_2.png";
+
+// Local image imports for Pedesis case study
+import pededisLogo from "../../imports/Pedesis-logo-final.png";
+import pededisWireframes from "../../imports/Pedesis-Wireframes-2.png";
+import pededisNotes1 from "../../imports/Notes1.png";
+import pededisNotes2 from "../../imports/Notes2.png";
+import pededisDesktop from "../../imports/DesktopSite.png";
+import pedesisMobile from "../../imports/MobileSite.jpeg";
+
 // Section types for flexible case study content
 export type SectionType =
-  | { type: "text"; heading: string; content: string | string[] }
-  | { type: "list"; heading: string; items: string[] }
-  | { type: "image"; url: string; caption?: string; layout?: "full" | "half" | "third" }
-  | { type: "image-grid"; images: Array<{ url: string; caption?: string }>; columns?: 2 | 3 }
-  | { type: "callout"; heading: string; content: string; variant?: "default" | "success" | "warning" }
+  | {
+      type: "text";
+      heading: string;
+      content: string | string[];
+    }
+  | { type: "list"; heading: string; items: string[]; variant?: "numbered" | "bullet" }
+  | {
+      type: "image";
+      url: string;
+      caption?: string;
+      layout?: "full" | "half" | "third";
+      objectFit?: "cover" | "contain";
+      imageBg?: string;
+    }
+  | {
+      type: "image-grid";
+      images: Array<{ url: string; caption?: string }>;
+      columns?: 2 | 3;
+      layout?: "default" | "device";
+      imageHeight?: string;
+    }
+  | {
+      type: "callout";
+      heading: string;
+      content: string;
+      variant?: "default" | "success" | "warning";
+    }
   | { type: "divider" }
-  | { type: "quote"; text: string; author?: string };
+  | { type: "quote"; text: string; author?: string }
+  | { type: "youtube"; videoId: string; caption?: string }
+  | { type: "placeholder"; labels: string[]; columns?: 2 | 3 }
+  | { type: "external-link"; url: string; label: string; description: string };
 
 export interface CaseStudy {
   id: string;
   title: string;
   subtitle: string;
-  category: string;
+  medium: string;
+  password?: string;
   year: string;
   duration: string;
   role: string;
@@ -29,362 +89,721 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "uncanny-valley-thesis",
     title: "Eye Appearance and the Uncanny Valley",
-    subtitle: "A research study exploring how digitally produced eyes trigger the uncanny valley effect",
-    category: "Master's Thesis",
+    subtitle:
+      "A research study exploring how digitally produced eyes trigger the uncanny valley effect",
+    medium: "Research Paper",
     year: "2018",
     duration: "16 weeks",
-    role: "Lead Researcher",
-    methods: ["Experimental Design", "Image Morphing", "Subjective Rating Scales", "Statistical Analysis"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1483519173755-be893fab1f46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwZXllJTIwY2xvc2UlMjB1cCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc5NjM2MDcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    role: "Researcher",
+    methods: [
+      "Experiment Design",
+      "3D Animation",
+      "Image Compositing",
+      "Subjective Rating Scales",
+      "Statistical Analysis",
+    ],
+    imageUrl: thesisHeader,
     accentColor: "#5BBF45",
-    tags: ["Research Design", "Academic"],
+    tags: ["Master's Thesis", "Research Design", "Academic"],
     featured: true,
     sections: [
       {
         type: "text",
         heading: "Overview",
         content: [
-          "I've long been fascinated by the uncanny valley concept and its theoretical foundations. Theorists propose that the uncanny valley is a disgust of human-like, but not-quite-human figures that stems from survival instinct. I explored facial perception studies to identify specific aspects of artificial faces that may trigger this response.",
-          "From there, I explored my hypothesis via experimentation."
-        ]
-          },
+          "I've long been fascinated by the uncanny valley concept and its theoretical foundations. Theorists propose that the uncanny valley is a disgust of human-like, but not-quite-human figures that stems from survival instinct — an avoidance mechanism tied to cues of death or disease.",
+          "I explored facial perception research to identify a specific pain point in artificial faces likely to trigger this response, then designed an experiment to test my hypothesis.",
+        ],
+      },
       {
         type: "image-grid",
         images: [
-          {
-            url: "https://images.unsplash.com/photo-1593376893114-1aed528d80cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxodW1hbm9pZCUyMHJvYm90JTIwZmFjZSUyMHVuY2Fubnl8ZW58MXx8fHwxNzc5NjM2MDcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-            caption: "Creepy-looking robot"
-          },
-          {
-            url: "https://images.unsplash.com/photo-1634909924531-4daae117dbc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxodW1hbm9pZCUyMHJvYm90JTIwZmFjZSUyMHVuY2Fubnl8ZW58MXx8fHwxNzc5NjM2MDcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-            caption: "Character from The Polar Express"
-          }
+          { url: uncannyValleyRobot, caption: "An early example of the uncanny valley: a humanoid robot" },
+          { url: polarExpressCreepy, caption: "A character from The Polar Express" },
         ],
-        columns: 2
+        columns: 2,
+        imageHeight: "320px",
       },
       { type: "divider" },
       {
         type: "text",
         heading: "The Uncanny Valley",
-        content: "The uncanny valley theory states that as artificial human renderings approach realism, they trigger negative responses. First proposed by Masahiro Mori in 1970 and translated by Jasia Reichardt in 1978, this phenomenon describes the emotional response to nearly-human entities."
+        content:
+          "The theory holds that as artificial human renderings approach realism, they reach a point that triggers strongly negative emotional responses. The phenomenon was originally proposed by roboticist Masahiro Mori in 1970; the term \"uncanny valley\" was introduced through a Jasia Reichardt translation in 1978.",
       },
       {
         type: "image",
-        url: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGdyYXBoJTIwY2hhcnR8ZW58MXx8fHwxNzc5NjM2MDcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-        caption: "Graph showing uncanny valley effect curve",
-        layout: "full"
+        url: valleyGraph,
+        caption: "Mori's original uncanny valley graph — familiarity plotted against human likeness",
+        layout: "full",
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "Facial Perception",
+        content: [
+          "Research shows that humans fixate on the eye region 40% of the time when viewing a forward-facing face (Janik et al., 1978). Chimpanzee eye-tracking studies (Hirata et al., 2010) confirmed this pattern extends across species — attention centered on the eyes even when faces were rotated or inverted.",
+          "If emotional connection flows primarily through the eyes, then eyes alone may be sufficient to trigger the uncanny valley response.",
+        ],
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: facialTrackingChimps1, caption: "Chimp face variants used in eye-tracking research" },
+          { url: facialTrackingChimps2, caption: "Heatmaps showing attention distribution on chimp faces" },
+        ],
+        columns: 2,
+      },
+      {
+        type: "image",
+        url: facialTrackingHumans,
+        caption: "Eye-tracking data on human faces and 3D facial landmark tracking",
+        layout: "full",
       },
       { type: "divider" },
       {
         type: "callout",
         heading: "Hypothesis",
         content: "Digitally produced eyes alone can trigger the uncanny valley effect.",
-        variant: "success"
+        variant: "success",
       },
       { type: "divider" },
       {
         type: "text",
-        heading: "Methods",
-        content: "I created eleven test images by morphing real human video footage with 3D models in Autodesk Maya at varying opacity levels. Two experiments were conducted using a custom p5.js web application where participants rated 8-second looped videos on a five-point scale."
+        heading: "Experiment",
+        content:
+          "Participants rated images on a 5-point scale ranging from \"I HATE this\" to \"This is human.\" Eleven stimuli were created by morphing real video footage with a 3D uncanny digital human model at varying degrees of digital eye opacity.",
       },
       {
         type: "image-grid",
         images: [
-          {
-            url: "https://images.unsplash.com/photo-1530707114297-4af4b3cafe16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxkaWdpdGFsJTIwZXllJTIwY2xvc2UlMjB1cCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc5NjM2MDcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-            caption: "Original stock footage"
-          },
-          {
-            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGdyYXBoJTIwY2hhcnR8ZW58MXx8fHwxNzc5NjM2MDcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-            caption: "3D facial rig in Maya"
-          },
-          {
-            url: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGdyYXBoJTIwY2hhcnR8ZW58MXx8fHwxNzc5NjM2MDcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-            caption: "70% digital morph"
-          }
+          { url: femaleRatingLaptop, caption: "Rating interface with printed 5-point scale" },
+          { url: femaleRatingScreen, caption: "The p5.js rating application" },
         ],
-        columns: 3
+        columns: 2,
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "Asset Production",
+        content:
+          "Eleven test stimuli were produced by morphing original stock footage with a 3D facial rig built in Autodesk Maya at increments from 10% to 100% digital eye opacity.",
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: femaleOriginal, caption: "Original stock footage" },
+          { url: facialRig, caption: "Facial rig in Autodesk Maya" },
+          { url: femaleFinal70, caption: "70% digital eye opacity" },
+        ],
+        columns: 3,
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "Experiment 1",
+        content:
+          "A local browser app built with p5.js displayed 11 looped 8-second videos in random order. Participants clicked one of five buttons to rate each clip — from \"I HATE this; this is not human\" to \"This is a human.\" A printed scale was placed over the keyboard; only the trackpad was used.",
+      },
+      {
+        type: "image",
+        url: femaleTestPercentages,
+        caption: "All 11 female test stimuli — original through 100% digital eye opacity",
+        layout: "full",
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "Experiment 2",
+        content:
+          "Experiment 2 used male stock footage to account for gender bias. Two updates were made to the app: response time (time between image load and button click) was now logged, and a start screen was added so participants were not exposed to the first stimulus during instructions.",
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: maleStartScreen, caption: "Start screen added for Experiment 2" },
+          { url: maleVideo, caption: "Male stimulus in the rating interface" },
+        ],
+        columns: 2,
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "Data Analysis",
+        content: [
+          "Ratings were converted to numerical values, averaged per image, and graphed against Mori's original uncanny valley curve. A notable pattern emerged: responses to earlier images in a session trended toward neutral, likely due to comparison effects from preceding stimuli.",
+          "Experiment 2 introduced a response-time graph. Individual data sheets showed higher response times and more neutral ratings on first-viewed images — expected to balance out across averaged trials.",
+        ],
+      },
+      {
+        type: "image",
+        url: results1,
+        caption: "Experiment 1 — Average Perceived Uncanniness vs. % Opacity",
+        layout: "full",
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: results21Rating, caption: "Experiment 2 — Average Rating vs. % Opacity" },
+          { url: results21Response, caption: "Experiment 2 — Average Response Time vs. % Opacity" },
+        ],
+        columns: 2,
       },
       { type: "divider" },
       {
         type: "list",
-        heading: "Outcomes & Impact",
+        heading: "Outcomes & Findings",
         items: [
-          "Digital eyes triggered the uncanny valley effect in both experiments with statistical significance",
-          "Turning point of perceived uncanniness began around 20% digital opacity",
-          "Responses became overwhelmingly negative at 70% digital opacity",
-          "Rapid response times indicated eyes as the primary evaluation point for human-likeness"
-        ]
+          "Digital eyes triggered the uncanny valley effect in both rounds of testing",
+          "The uncanny turning point began at approximately 20% digital opacity",
+          "At 70% digital opacity, responses were overwhelmingly negative in both image sets",
+          "Fast response times indicated the eye region alone drove humanness judgment without requiring full facial analysis",
+        ],
       },
       {
-        type: "quote",
-        text: "There was sufficient evidence to support the claim."
-      }
-    ]
+        type: "callout",
+        heading: "Conclusion",
+        content: "There was sufficient evidence to support the claim.",
+        variant: "success",
+      },
+    ],
   },
   {
     id: "unseen-media",
     title: "Unseen Media",
     subtitle: "Tabletop gaming reimagined with augmented reality technology",
-    category: "Immersive Tech",
-    year: "2017-2021",
+    medium: "AR Tabletop Game",
+    year: "2017–2021",
     duration: "5 years",
-    role: "Product Designer",
-    methods: ["Customer Discovery", "User Testing", "Prototyping", "Competitive Analysis"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1585504198199-20277593b94f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwdGFibGV0b3AlMjBnYW1lJTIwYm9hcmR8ZW58MXx8fHwxNzc5NjQzNDU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    role: "Product Designer & Researcher",
+    methods: [
+      "Customer Discovery",
+      "User Testing",
+      "Prototyping",
+      "Competitive Analysis",
+    ],
+    imageUrl: unseenImage36,
     accentColor: "#5BBF45",
-    tags: ["AR/VR", "Product Design", "Gaming", "User Research"],
+    tags: [
+      "Immersive Technology",
+      "AR/VR",
+      "Product Design",
+      "Gaming",
+      "User Research",
+    ],
     featured: true,
     sections: [
       {
         type: "text",
         heading: "Overview",
         content: [
-          "This was an initiative to integrate augmented reality technology into tabletop board games. The end product was a mystery-themed game that was mailed to players' homes. The game combined physical clues with web-based augmented reality tools and an agent profile system for tracking progress.",
-          "This concept evolved from an escape room idea in mid-2017. After conducting 100+ customer interviews, we pivoted to address the limitations of location and time constraints by delivering the experience directly to customers' homes.",
-          "The project participated in several notable programs: NYU's Fall 2017 Prototyping Fund, NYC Media Lab's inaugural XR Startup Bootcamp, XR Beta Residency Program at the RLab, and Augmented Reality Expo 2019."
-        ]
+          "Unseen Media was an initiative to integrate augmented reality into tabletop mystery games. Players received a ship-to-home box of physical clues to investigate the death of \"Charlotte Depsi,\" combined with web-based AR tools and an agent profile system for tracking progress through the narrative.",
+          "The concept originated as an escape room AR idea in mid-2017. After conducting 100+ customer interviews, we pivoted to a mail-to-home format to overcome the location and time constraints of physical venues and reach a broader market.",
+          "The project was selected for NYU's Fall 2017 Prototyping Fund, NYC Media Lab's inaugural XR Startup Bootcamp, the XR Beta Residency Program at RLab (Brooklyn Navy Yard), and Augmented Reality Expo 2019 in Santa Clara.",
+        ],
+      },
+      {
+        type: "youtube",
+        videoId: "2iB-f2j0Ems",
+        caption: "Unseen Media product demo",
       },
       { type: "divider" },
       {
         type: "text",
         heading: "My Role",
-        content: "I served as a product designer and researcher for this project, conducting extensive user interviews, competitive analysis, and iterative prototyping."
+        content: "I served as product designer and researcher — conducting customer interviews, leading competitive analysis, designing AR interfaces, and iterating on the physical and digital product based on playtesting feedback.",
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Customer Discovery",
         content: [
-          "I helped conduct over 100 interviews with potential customers, taking extensive notes on their feedback and preferences. This research phase was critical in understanding what users actually wanted from a mystery game experience.",
-          "Our findings indicated that the original escape room concept lacked adequate market scalability. Testing revealed a strong preference for at-home mystery games with AR integration."
-        ]
+          "We conducted 100+ interviews with potential customers to understand what they wanted from a mystery game experience. Our original escape room concept showed strong interest but limited scalability — testing quickly revealed that at-home mystery games had far better market reach.",
+          "Interview notes were synthesized to identify the core values driving purchase decisions.",
+        ],
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: unseenNotes1, caption: "Customer interview notes" },
+          { url: unseenNotes2, caption: "Individual participant profile" },
+        ],
+        columns: 2,
       },
       {
         type: "callout",
         heading: "Customer Values Identified",
-        content: "Convenience, Cost, and Story emerged as the three primary factors that would drive customer decisions.",
-        variant: "success"
+        content: "**Convenience**, **cost**, and **story** emerged as the three factors customers cared about most.",
+        variant: "success",
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Early Prototypes",
-        content: "The purpose of our early prototypes was to observe how users would interact with semi-linear storylines through a series of puzzles, and how they would engage with AR elements integrated into the physical game."
+        content: "Our early prototypes were designed to observe how users navigate semi-linear storylines through puzzles, and how they engage with AR elements embedded in a physical game.",
       },
       {
         type: "list",
         heading: "Key Learnings",
         items: [
-          "AR elements required clear guidance and instruction for users unfamiliar with the technology",
+          "Augmented reality elements required hand-holding for users encountering the technology for the first time",
           "Puzzle design needed to prevent players from skipping ahead in the story sequence",
-          "Overly frustrating elements caused players to disengage from the experience"
-        ]
+          "Overly frustrating puzzles caused disengagement from the experience",
+        ],
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Competitive Analysis",
-        content: "I played through similar products including Hunt A Killer, The Mysterious Package Company, and Breakout to understand what worked well in the market."
+        content: "I played through Hunt A Killer, The Mysterious Package Company, and Breakout Games to understand established conventions and identify gaps in the market.",
       },
       {
         type: "list",
         heading: "Competitive Findings",
         items: [
-          "Web and social media integration brings narrative into the physical realm effectively",
-          "Physical components initiate experiences while clues span multiple mediums",
-          "Non-linear narrative discovery with password/code progression locks creates engagement",
-          "Tangible objects provide satisfying interaction that pure digital cannot replicate"
-        ]
+          "Games use web and social platforms to extend the story into reality",
+          "Physical components initiate the experience while clues span multiple mediums",
+          "Password walls and code unlocks keep players from skipping too far ahead",
+          "Tangible objects provide satisfying interaction that pure digital cannot replicate",
+        ],
+      },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1708863828286-63b56b08f292?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxteXN0ZXJ5JTIwYm9hcmQlMjBnYW1lJTIwc3Vic2NyaXB0aW9uJTIwYm94JTIwY29udGVudHN8ZW58MXx8fHwxNzgyMzM0MTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        caption: "Hunt A Killer subscription box game pieces",
+        layout: "full",
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Designing for Augmented Reality",
         content: [
-          "AR was an emerging medium at the time, and most users had limited familiarity with it. This required designing not just intuitive interfaces, but also providing user education throughout the experience.",
-          "Our design principles prioritized simplicity, provided liberal onscreen text instructions, and included consistent reminders about spatial movement possibilities."
-        ]
+          "AR was a emerging medium — many players encountered it for the first time through this product. Designing for it meant not just building intuitive interfaces, but actively educating users within the experience itself.",
+          "Our design principles: keep interactions simple, offer liberal on-screen text instructions whenever in doubt, and remind players that spatial movement — not pinching to zoom — is possible.",
+        ],
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Prototype: The Dyatlov Files",
         content: [
-          "Based on customer discovery insights, we focused on creating a story-driven experience. The team selected a true crime narrative leveraging the Dyatlov Pass Incident, where nine hikers mysteriously died in Russia.",
-          "This prototype allowed us to map out complex interactions and discoveries while testing early game piece concepts."
-        ]
+          "Based on customer discovery insights, we built a story-driven prototype around a real event: the Dyatlov Pass Incident, in which nine hikers mysteriously died in the Russian wilderness in 1959.",
+          "An extensive mind map was built to link puzzle interactions to story beats, and early game piece prototypes were developed and tested.",
+        ],
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: "https://images.unsplash.com/photo-1598520106830-8c45c2035460?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5kJTIwbWFwJTIwZGlhZ3JhbSUyMHdoaXRlYm9hcmQlMjBwbGFubmluZ3xlbnwxfHx8fDE3ODIzMzQyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "Mind map — Dyatlov story paths and puzzle connections" },
+          { url: "https://images.unsplash.com/photo-1676651471150-0e3a5f8de05e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1lJTIwcHJvdG90eXBlJTIwcGllY2VzJTIwdGFibGV0b3B8ZW58MXx8fHwxNzgyMzM0MjAzfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "Early Dyatlov Files physical game piece prototypes" },
+        ],
+        columns: 2,
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Testing",
-        content: "We conducted unmoderated gameplay sessions at RLab events with diverse participants including AR/VR enthusiasts, students, casual gamers, and entrepreneurs."
+        content: "We ran unmoderated gameplay sessions at RLab events with a diverse mix of participants: AR/VR enthusiasts, students, casual gamers, and entrepreneurs.",
       },
       {
         type: "list",
-        heading: "User Testing Findings",
+        heading: "Findings",
         items: [
-          "High engagement with narrative elements",
-          "Strong appeal of tactile puzzle components",
-          "Unity App had compatibility limitations with older phones",
-          "Web elements were navigated easily by most users"
-        ]
+          "Story elements drove high engagement throughout the session",
+          "Tactile puzzle components were universally appealing",
+          "The Unity app excluded players with older phones due to compatibility issues",
+          "Web-based elements were navigated easily by most users",
+        ],
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwc3RhcnR1cCUyMGRlbW8lMjBldmVudCUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3ODIzMzQyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "Demo session at RLab, Brooklyn Navy Yard" },
+          { url: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHx0ZWNoJTIwc3RhcnR1cCUyMGRlbW8lMjBldmVudCUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3ODIzMzQyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "Demo session at R/GA Hudson Yards office" },
+        ],
+        columns: 2,
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Iteration",
-        content: "Analysis of playtesting sessions revealed specific issues that required redesign."
+        content: "Extensive playtesting surfaced three clear areas requiring redesign before we could move to the next prototype.",
       },
       {
         type: "list",
         heading: "Key Takeaways",
         items: [
-          "Envelope and paper materials felt inexpensive and detracted from the premium experience",
-          "AR integration felt mismatched with the historical 1950s setting",
-          "Players preferred hands-on interactive elements over reading text"
-        ]
+          "Envelope and paper materials felt cheap and undermined the premium experience",
+          "AR didn't fit the historical 1950s Russian setting — the technology felt anachronistic",
+          "Players wanted more hands-on interactive elements and less reading",
+        ],
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: "https://images.unsplash.com/photo-1649019489428-70f505daacd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxteXN0ZXJ5JTIwZW52ZWxvcGUlMjBkb2N1bWVudHMlMjBsZXR0ZXJzJTIwc3ByZWFkfGVufDF8fHx8MTc4MjMzNDIwMnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Dyatlov Files — outer envelope" },
+          { url: "https://images.unsplash.com/photo-1648994605501-fe0a391d2653?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxteXN0ZXJ5JTIwZW52ZWxvcGUlMjBkb2N1bWVudHMlMjBsZXR0ZXJzJTIwc3ByZWFkfGVufDF8fHx8MTc4MjMzNDIwMnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Dyatlov Files — box contents spread on tabletop" },
+        ],
+        columns: 2,
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Interface Mockups for AR",
         content: [
-          "Designing AR experiences presented unique communication challenges. Traditional wireframing had limitations when conveying spatial and interactive elements.",
-          "I emphasized visual communication methods and close collaboration with developers to ensure the AR interfaces felt grounded in real-world metaphors and interactions. As user familiarity with AR increases, we expected these interfaces could become more simplified and abstract."
-        ]
+          "Designing AR wireframes presented unique challenges — traditional static wireframing couldn't capture spatial interaction and motion. This required heavier visual communication and close collaboration with developers.",
+          "A key principle: draw from real-world names and metaphors (hacking tools, scanning devices) to ease users into unfamiliar AR interactions before introducing more abstract ones.",
+        ],
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: "https://images.unsplash.com/photo-1495549115977-ca0a18c9f6a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "AR app — scanning scrambled documents" },
+          { url: "https://images.unsplash.com/photo-1455762279210-ae6b56c7ad7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "AR app — documents unscrambled" },
+        ],
+        columns: 2,
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: "https://images.unsplash.com/photo-1541081006231-baeef8268bd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "iPhone AR scan — step 1" },
+          { url: "https://images.unsplash.com/photo-1495549115977-ca0a18c9f6a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "iPhone AR scan — step 2" },
+          { url: "https://images.unsplash.com/photo-1455762279210-ae6b56c7ad7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "iPhone AR scan — step 3" },
+        ],
+        columns: 3,
+      },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1541081006231-baeef8268bd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+        caption: "iPhone AR scan — step 4 (revealed content)",
+        layout: "half",
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Prototype Two: Charlotte Depsi",
         content: [
-          "We transitioned to a higher-fidelity boxed prototype and hired a professional writer to craft a more compelling mystery narrative. We partnered with 8th Wall to create web-based AR experiences accessible on any device, eliminating the compatibility issues from our first prototype.",
-          "This version included multiple web elements, interactive puzzles, and an Agent Portal for tracking progress through the mystery."
-        ]
+          "We moved to a higher-fidelity boxed prototype, commissioned a professional writer for a more compelling mystery narrative, and partnered with 8th Wall to deliver web-based AR on any device — eliminating the Unity compatibility issues entirely.",
+          "This version added multiple web puzzles, an Instagram profile for fictional character Angelica Greenstone, and the DSF Agency Agent Portal for tracking case progress.",
+        ],
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: "https://images.unsplash.com/photo-1495549115977-ca0a18c9f6a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Crime scene reconstruction AR — scan recognized" },
+          { url: "https://images.unsplash.com/photo-1455762279210-ae6b56c7ad7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Crime scene reconstruction AR — tap to place" },
+          { url: "https://images.unsplash.com/photo-1541081006231-baeef8268bd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Crime scene reconstruction AR — 3D model placed" },
+        ],
+        columns: 3,
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: "https://images.unsplash.com/photo-1686061592689-312bbfb5c055?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBhcHAlMjBkYXNoYm9hcmQlMjBpbnRlcmZhY2UlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc4MjMzNDIwM3ww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Instagram profile — Angelica Greenstone (fictional character)" },
+          { url: "https://images.unsplash.com/photo-1763718528755-4bca23f82ac3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHx3ZWIlMjBhcHAlMjBkYXNoYm9hcmQlMjBpbnRlcmZhY2UlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc4MjMzNDIwM3ww&ixlib=rb-4.1.0&q=80&w=1080", caption: "DSF Agency Agent Portal web interface" },
+        ],
+        columns: 2,
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Feedback from Demos and Conferences",
         content: [
-          "Through RLab connections, we became involved with the NYC AR/VR community and conducted multiple conference demonstrations and playtesting sessions. An important insight was learning to separate excitement about the technology from actual product evaluation.",
-          "Our preferred testing methodology became unmoderated, closely-observed sessions followed by in-depth interviews."
-        ]
+          "Through RLab connections we participated in multiple NYC AR/VR community events, running observed playtesting sessions at Halloween Play 2019 and other demos. A key lesson: separate excitement about the technology from genuine product evaluation.",
+          "Our preferred method became unmoderated, closely observed sessions followed by in-depth interviews.",
+        ],
       },
       {
         type: "list",
-        heading: "User Testing Insights",
+        heading: "Key Learnings",
         items: [
-          "Users defaulted to 'pinch to zoom' gestures instead of spatial movement in AR",
-          "CSI-style hacking tool framing significantly enhanced enjoyment",
-          "Identified partnership opportunities with licensed content and educational institutions",
-          "Help modals were essential for guiding users through AR elements",
-          "Written prompts proved superior to implicit next-step instructions"
-        ]
+          "Users defaulted to pinch-to-zoom rather than physically moving closer to AR objects",
+          "Framing AR tools as CSI-style hacking devices significantly enhanced enjoyment",
+          "Identified partnership opportunities with licensed content providers and educational institutions",
+          "A help modal was essential — users frequently needed guidance mid-AR-interaction",
+          "Clear written prompts consistently outperformed implicit navigational cues",
+        ],
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: "https://images.unsplash.com/photo-1725109900649-fba28ac508fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxib2FyZCUyMGdhbWUlMjBjb252ZW50aW9uJTIwZGlzcGxheSUyMHRhYmxlfGVufDF8fHx8MTc4MjMzNDIwNHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Unseen Media demo table — Halloween Play 2019" },
+          { url: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwc3RhcnR1cCUyMGRlbW8lMjBldmVudCUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3ODIzMzQyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "Wider demo area — Halloween Play 2019" },
+        ],
+        columns: 2,
       },
       { type: "divider" },
       {
         type: "text",
         heading: "Final Product",
         content: [
-          "The final product was a ship-to-home box enabling small groups to experience the Charlotte Depsi mystery narrative. Players worked through physical clues, web-based puzzles, and AR elements to solve the mystery.",
-          "Our success metric was compelling: 91% of players completed the entire experience, with consistently positive feedback about the integration of physical and digital elements."
-        ]
-      }
-    ]
+          "The final Charlotte Depsi mystery box shipped to players' homes, enabling small groups to work through physical clues, web puzzles, and AR experiences to solve the case.",
+          "91% of players completed the experience start to finish — a strong signal that the integration of physical and digital elements created genuine engagement.",
+        ],
+      },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1676482721054-59f8326cd1d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxnYW1lJTIwcHJvdG90eXBlJTIwcGllY2VzJTIwdGFibGV0b3B8ZW58MXx8fHwxNzgyMzM0MjAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+        caption: "Final Charlotte Depsi mystery box contents",
+        layout: "full",
+      },
+    ],
   },
   {
-    id: "healthcare-dashboard",
-    title: "Clinical Dashboard Research for ICU Teams",
-    subtitle: "Reducing cognitive load for nurses managing critical patient data under pressure",
-    category: "VFX Software",
-    year: "2023",
-    duration: "18 weeks",
-    role: "Senior UX Researcher",
-    methods: ["Ethnographic Observation", "Expert Interviews", "Cognitive Walkthrough", "Heuristic Evaluation"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1645684922842-87793d0b25df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZGlnaXRhbCUyMGhlYWx0aCUyMHBhdGllbnQlMjBleHBlcmllbmNlfGVufDF8fHx8MTc3Njc4Nzk0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    id: "pedesis",
+    title: "Pedesis",
+    subtitle:
+      "An e-commerce website for pandemic PPE",
+    medium: "E-Commerce Website",
+    year: "2020",
+    duration: "24 weeks",
+    role: "UX Researcher & Project Manager",
+    methods: [
+      "Competitive Analysis",
+      "User Testing",
+      "Prototyping",
+      "Client Research",
+    ],
+    imageUrl: pededisDesktop,
     accentColor: "#5BBF45",
-    tags: ["Healthcare", "Ethnography", "Safety", "Enterprise"],
+    tags: ["UX Research", "E-Commerce", "Healthcare"],
     featured: true,
     sections: [
       {
+        type: "image",
+        url: pededisLogo,
+        layout: "half",
+        objectFit: "contain",
+        imageBg: "#ffffff",
+        caption: "Pedesis brand identity",
+      },
+      {
         type: "text",
         heading: "Overview",
-        content: "A healthcare technology company needed to redesign their ICU monitoring dashboard for nursing staff. High cognitive load and poor information hierarchy were contributing to alert fatigue — a genuine patient safety concern."
+        content: [
+          "Pedesis is a healthcare brand that promotes happy, healthy lifestyles through the recommendation of science-backed methods and products. They approached me in early 2020 to build an e-commerce site selling PPE to both individuals and hospitals.",
+          "The project required balancing a trustworthy medical brand aesthetic with a modern, approachable feel — while meeting demanding technical requirements including bilingual content management and bulk ordering support.",
+        ],
+      },
+      {
+        type: "text",
+        heading: "My Role",
+        content:
+          "UX researcher and project manager. I led competitive research, facilitated user testing sessions, synthesized findings, and coordinated platform decisions with the client and development team.",
       },
       { type: "divider" },
       {
         type: "text",
-        heading: "The Challenge",
-        content: "The research environment was uniquely constrained: sessions had to happen in live ICU units with strict time limits per nurse, and the stakes of getting the design wrong were life-critical. Ethics approval alone took 8 weeks."
+        heading: "Understanding the Client's Needs",
+        content: [
+          "The client had clear brand aspirations: the site needed to feel trustworthy, caring, science-rooted, and modern. They wanted a healthcare palette without feeling sterile or overly clinical.",
+          "Functionally, the requirements were demanding: cross-country e-commerce capability, a bilingual CMS supporting both English and Chinese, and the ability to handle both single-item purchases and large bulk hospital orders from one system.",
+        ],
       },
       { type: "divider" },
       {
         type: "text",
-        heading: "The Process",
-        content: "Over 10 weeks of ethnographic observation across two hospital sites, I documented 400+ hours of nursing workflows. Expert interviews with 16 nurses and 8 attending physicians revealed critical gaps between what the system showed and what clinical decisions required. A cognitive walkthrough of 5 key scenarios identified 23 usability failures."
+        heading: "Research",
+        content:
+          "I conducted a competitive analysis of healthcare and PPE e-commerce sites to establish design conventions and identify differentiation opportunities.",
       },
-      { type: "divider" },
       {
         type: "list",
-        heading: "Outcomes & Impact",
+        heading: "Competitive Analysis Findings",
         items: [
-          "Defined a new information architecture reducing visible alerts by 60%",
-          "Alarm fatigue incidents reduced by 28% in 3-month pilot",
-          "Research directly contributed to FDA 510(k) submission documentation",
-          "Published case study presented at HFES 2023 Annual Meeting"
-        ]
-      }
-    ]
+          "Blue dominates healthcare branding for its associations with calm, trust, and reliability",
+          "Non-Amazon platforms share similar layout conventions — familiar patterns reduce friction",
+          "Traditional elements like serif fonts and sidebars are common across the space",
+          "Bulk-order brands typically route customers directly to a contact/quote workflow rather than cart",
+        ],
+      },
+      {
+        type: "text",
+        heading: "Platform Selection",
+        content:
+          "Shopify and Square were evaluated but both lacked adequate Chinese-language support. Webflow met both the bilingual CMS requirement and the client's preference for a low-technical-skill admin experience — making it the clear choice.",
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "Early Prototypes",
+        content:
+          "Low-fidelity wireframes were developed and reviewed with the client before user testing. They covered the full site architecture: product listing, product detail, cart, checkout, about, and contact pages.",
+      },
+      {
+        type: "image",
+        url: pededisWireframes,
+        caption:
+          "Low-fidelity wireframes used for client review and user testing",
+        layout: "full",
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "Additional Page Requirements",
+        content:
+          "Through client conversations, I documented a detailed spec for what product cards and individual product pages needed to surface.",
+      },
+      {
+        type: "list",
+        heading: "Product Card",
+        variant: "bullet",
+        items: ["Product image", "Quantity per order", "Price"],
+      },
+      {
+        type: "list",
+        heading: "Product Page",
+        variant: "bullet",
+        items: [
+          "Stock count and masks per box / sealed bag",
+          '"Information at a glance" summary block',
+          "FDA/CDC specifications and MSDN number",
+          "Certifications with watermarks and ISO numbers",
+          "Sizing variations and additional information",
+          "Terms & conditions / no-refund policy",
+          "Related Products section and multi-product care package support",
+        ],
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "User Testing",
+        content:
+          "Testing sessions revealed a clear pattern: users were overwhelmed by information density and struggled with navigation. I documented findings directly during sessions to capture nuance.",
+      },
+      {
+        type: "image-grid",
+        images: [
+          {
+            url: pededisNotes1,
+            caption: "Session notes — navigation issues",
+          },
+          {
+            url: pededisNotes2,
+            caption: "Session notes — product card feedback",
+          },
+        ],
+        columns: 2,
+      },
+      {
+        type: "list",
+        heading: "Key Takeaways",
+        items: [
+          "Product cards had too much information — simplify and move detail to individual product pages",
+          "Side navigation felt confusing and visually inconsistent with healthcare expectations",
+          "Moving navigation to the bottom improved mobile wayfinding significantly",
+          "Search was deemed low-priority given the small product catalog",
+        ],
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "Final Product",
+        content: [
+          "The final site launched on Webflow with full bilingual support, a streamlined product catalog, and a clean checkout flow tested to work smoothly across devices.",
+          "The redesigned navigation and simplified product cards directly addressed the top user testing pain points.",
+        ],
+      },
+      {
+        type: "image-grid",
+        images: [
+          { url: pedesisMobile, caption: "Mobile view" },
+          { url: pededisDesktop, caption: "Desktop view" },
+        ],
+        columns: 2,
+        layout: "device",
+      },
+    ],
   },
   {
-    id: "ecommerce-checkout",
-    title: "E-Commerce Checkout Optimization",
-    subtitle: "A mixed-methods investigation into cart abandonment at the moment of decision",
-    category: "Immersive Tech",
-    year: "2022",
-    duration: "8 weeks",
-    role: "UX Researcher",
-    methods: ["A/B Testing Analysis", "Session Replay Analysis", "Intercept Surveys", "Jobs-to-be-Done Interviews"],
+    id: "vfx-software",
+    password: "supersecretpassword",
+    title: "UX Research for VFX Software",
+    subtitle:
+      "Ongoing UX research for professional VFX tooling",
+    medium: "Professional Software",
+    year: "2022–Present",
+    duration: "Ongoing",
+    role: "UX Research Consultant",
+    methods: [
+      "Contextual Inquiry",
+      "Expert Interviews",
+      "Workflow Mapping",
+      "Heuristic Evaluation",
+      "Think-Aloud Sessions",
+      "Stakeholder Alignment",
+    ],
     imageUrl:
-      "https://images.unsplash.com/photo-1757301714935-c8127a21abc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBzaG9wcGluZyUyMGludGVyZmFjZSUyMHdpcmVmcmFtZXxlbnwxfHx8fDE3NzY3ODc5MjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1619097647550-0fe7f031c18b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwdmlzdWFsJTIwZWZmZWN0cyUyMHByb2R1Y3Rpb24lMjBjb2xvciUyMGdyYWRpbmclMjBkYXJrfGVufDF8fHx8MTc4MjMzNDYzMnww&ixlib=rb-4.1.0&q=80&w=1080",
     accentColor: "#5BBF45",
-    tags: ["E-Commerce", "Conversion", "Mixed Methods", "B2C"],
-    featured: false,
+    tags: ["VFX Software", "Expert Users", "Embedded Research", "Enterprise"],
+    featured: true,
     sections: [
+      {
+        type: "callout",
+        heading: "Confidentiality Notice",
+        content:
+          "This work is covered by a non-disclosure agreement. Project names, client details, specific findings, and deliverables cannot be shared. What follows describes my role, approach, and the nature of the work in general terms.",
+        variant: "default",
+      },
+      {
+        type: "external-link",
+        url: "https://unity.com/blog/news/welcome-weta-digital",
+        label: "Unity — Welcome, Weta Digital",
+        description: "One of the few public representations of the tools I work on.",
+      },
+      { type: "divider" },
       {
         type: "text",
         heading: "Overview",
-        content: "A mid-size e-commerce retailer had a 71% cart abandonment rate — well above the industry average. I led a mixed-methods study to pinpoint the friction points and evaluate competing hypotheses about why users were dropping off."
+        content: [
+          "I work as an embedded UX research consultant across a portfolio of professional software tools built for visual effects artists — people who create the imagery behind major feature films, streaming series, and commercial productions. These are tools used daily by some of the most technically sophisticated users in any industry.",
+          "Rather than being attached to a single product team, I operate as an internal consultant — moving across projects based on where research expertise will have the greatest impact. This means I'm often parachuting into work mid-stream, orienting quickly, and delivering clear direction under time pressure.",
+        ],
       },
       { type: "divider" },
       {
         type: "text",
-        heading: "The Challenge",
-        content: "Stakeholders disagreed sharply on the root cause: engineering suspected technical performance issues, marketing blamed lack of discount codes, and product pointed to a confusing multi-step checkout. My job was to let the data arbitrate."
+        heading: "The Domain",
+        content: [
+          "VFX production software occupies a rare position in the software landscape: the users are world-class experts. Artists and technical directors working at this level have spent years, often decades, building deep fluency with their tools. They have strong opinions, well-established workflows, and little patience for friction.",
+          "The cost of a bad design decision in this context isn't just frustration — it's lost hours on productions where time is measured in thousands of dollars per day. This makes research here both high-stakes and uniquely rewarding. When a change lands well, it improves the working lives of people doing some of the most skilled craft work in the industry.",
+        ],
       },
       { type: "divider" },
       {
         type: "text",
-        heading: "The Process",
-        content: "I analyzed 3 months of session replay recordings (600+ sessions coded) and triangulated with intercept surveys catching users at the moment of abandonment. JTBD interviews with 20 recent completers and 20 abandoners revealed dramatically different mental models about 'commitment' in the purchase flow."
+        heading: "My Role",
+        content: [
+          "I function as an in-house UX consultant — not embedded in a single team, but available across multiple concurrent projects. This requires earning trust quickly with different groups of stakeholders, calibrating my research approach to widely varying timelines and contexts, and knowing when to go deep versus when to synthesize fast and move on.",
+          "In practice, this looks like: joining a product team early in discovery to help frame the right research questions; running sessions with artists directly; synthesizing findings into clear, actionable direction for designers and engineers; and returning later to evaluate whether that direction held up.",
+        ],
       },
       { type: "divider" },
       {
-        type: "list",
-        heading: "Outcomes & Impact",
-        items: [
-          "Identified 'guest checkout visibility' as the #1 abandonment driver (not shipping cost)",
-          "A redesigned guest checkout entry point reduced abandonment by 18%",
-          "Shipping cost concern was #7 on the list — refuted the discount-first hypothesis",
-          "Research shifted roadmap priorities, saving ~$200K in planned promo spend"
-        ]
-      }
-    ]
+        type: "text",
+        heading: "Designing for Expert Users",
+        content: [
+          "Most UX norms are built around general users — people who are learning a product, may use it infrequently, and need to be guided. Expert users are different in almost every meaningful way. They have years of muscle memory. They've already optimized their environment around their existing workflow. They'll immediately notice when something familiar has been moved, and they'll form a strong opinion about why.",
+          "Research with expert users requires a different posture. You're not just observing — you're trying to understand a practice. The goal is to earn enough trust that someone with 15 years of experience will tell you where the real friction is, not just what they think you want to hear.",
+        ],
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "What I Bring",
+        content:
+          "Across engagements I draw on contextual inquiry to observe artists working in their natural environment, expert interviews to surface latent needs and surface-level workarounds, workflow mapping to identify where tools break down across a production pipeline, heuristic evaluation to quickly assess new features before they reach users, and think-aloud sessions to watch decision-making in real time. The method always follows the question — not the other way around.",
+      },
+      { type: "divider" },
+      {
+        type: "text",
+        heading: "Why This Work Matters",
+        content: [
+          "The VFX industry is undergoing significant technological change — AI-assisted tooling, cloud-based pipelines, and real-time rendering are reshaping how productions are made. The professionals navigating this shift are being asked to adapt rapidly, often with tools that weren't designed with their existing workflows in mind.",
+          "Good research in this space doesn't just make software easier to use — it helps ensure that the people who do this work aren't left behind by the tools meant to serve them.",
+        ],
+      },
+    ],
   },
 ];

@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router";
 import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import portraitImage from "../../imports/FA04DA7C-1279-483B-8C0B-3B0A944F32F2_1_201_a.jpeg?url";
+import portraitImage from "../../imports/Me1.jpeg";
 
 export function About() {
   const location = useLocation();
@@ -197,8 +197,8 @@ export function About() {
               >I can't talk too much about what I do <a href="https://www.imdb.com/name/nm6516608/" target="_blank" rel="noopener noreferrer" style={{ color: "#999", textDecoration: "underline", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#5BBF45")} onMouseLeave={(e) => (e.currentTarget.style.color = "#999")}>behind the scenes</a>, but you can reach out to me via <a href="mailto:chicory-samba-0x@icloud.com" style={{ color: "#999", textDecoration: "underline", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#5BBF45")} onMouseLeave={(e) => (e.currentTarget.style.color = "#999")}>email</a> or connect with me on <a href="https://linkedin.com/in/acacia-judge" target="_blank" rel="noopener noreferrer" style={{ color: "#999", textDecoration: "underline", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#5BBF45")} onMouseLeave={(e) => (e.currentTarget.style.color = "#999")}>LinkedIn</a> if you want to chat.</p>
             </div>
 
-            <Link
-              to="/contact"
+            <a
+              href="mailto:chicory-samba-0x@icloud.com"
               className="inline-flex items-center gap-2 px-5 py-3 text-sm tracking-widest uppercase transition-all duration-200 hover:gap-3"
               style={{
                 fontFamily: "'Space Mono', monospace",
@@ -208,7 +208,7 @@ export function About() {
             >
               Get in Touch
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
 
           {/* Right side — image placeholder + credentials */}
@@ -270,18 +270,11 @@ export function About() {
             {/* Education */}
             <div className="flex flex-col gap-2">
               {[
-                {
-                  label: "Education",
-                  value: "B.S. & M.S. in Integrated Design & Media, NYU",
-                },
-                {
-                  label: "Based In",
-                  value: "Brooklyn, NY",
-                },
-                {
-                  label: "Availability",
-                  value: "I'll hear you out",
-                },
+                { label: "Education", value: "B.S. & M.S. in Integrated Design & Media, NYU", href: undefined },
+                { label: "Based In", value: "Brooklyn, NY", href: undefined },
+                { label: "Email", value: "chicory-samba-0x@icloud.com", href: "mailto:chicory-samba-0x@icloud.com" },
+                { label: "LinkedIn", value: "linkedin.com/in/acacia-judge", href: "https://linkedin.com/in/acacia-judge" },
+                { label: "IMDB", value: "imdb.com/name/nm6516608/", href: "https://imdb.com/name/nm6516608/" },
               ].map((item, i) => (
                 <div
                   key={i}
@@ -290,22 +283,30 @@ export function About() {
                 >
                   <span
                     className="text-xs tracking-widest uppercase w-36 shrink-0"
-                    style={{
-                      fontFamily: "'Space Mono', monospace",
-                      color: "#777",
-                    }}
+                    style={{ fontFamily: "'Space Mono', monospace", color: "#777" }}
                   >
                     {item.label}
                   </span>
-                  <span
-                    className="text-sm"
-                    style={{
-                      fontFamily: "'Space Grotesk', sans-serif",
-                      color: "#bbb",
-                    }}
-                  >
-                    {item.value}
-                  </span>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      target={item.href.startsWith("mailto") ? undefined : "_blank"}
+                      rel="noopener noreferrer"
+                      className="text-sm"
+                      style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#bbb", textDecoration: "underline", transition: "color 0.2s" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "#5BBF45")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "#bbb")}
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <span
+                      className="text-sm"
+                      style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#bbb" }}
+                    >
+                      {item.value}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>

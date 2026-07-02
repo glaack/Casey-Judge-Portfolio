@@ -12,7 +12,6 @@ export function Work() {
       ? caseStudies
       : caseStudies.filter(
           (s) =>
-            s.category.toLowerCase().includes(activeFilter.toLowerCase()) ||
             s.tags.some((t) => t.toLowerCase().includes(activeFilter.toLowerCase()))
         );
 

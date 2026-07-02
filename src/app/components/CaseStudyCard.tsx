@@ -99,7 +99,7 @@ export function CaseStudyCard({
               color: "#080808",
             }}
           >
-            {study.category}
+            {study.tags[0]}
           </span>
         </div>
       </div>
