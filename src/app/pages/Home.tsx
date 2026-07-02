@@ -55,38 +55,13 @@ export function Home() {
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
                 color: "#f5f5f5",
-                fontSize: "clamp(2.5rem, 9vw, 8rem)",
+                fontSize: "clamp(2.5rem, 7.5vw, 7rem)",
                 fontWeight: 700,
                 letterSpacing: "-0.02em",
               }}
             >
-              Researching
+              Researching the
             </h1>
-            <div className="flex items-end gap-4 flex-wrap">
-              <h1
-                className="uppercase leading-[0.9]"
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  color: "#f5f5f5",
-                  fontSize: "clamp(2.5rem, 9vw, 8rem)",
-                  fontWeight: 700,
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                the{" "}
-                <span
-                  style={{
-                    background:
-                      "linear-gradient(135deg, #4AA83C, #6FD159)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
-                  Human
-                </span>
-              </h1>
-            </div>
             <h1
               className="uppercase leading-[0.9]"
               style={{
@@ -96,12 +71,12 @@ export function Home() {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
-                fontSize: "clamp(2.5rem, 9vw, 8rem)",
+                fontSize: "clamp(2.5rem, 7.5vw, 7rem)",
                 fontWeight: 700,
                 letterSpacing: "-0.02em",
               }}
             >
-              Experience
+              Human Experience
             </h1>
           </div>
 
