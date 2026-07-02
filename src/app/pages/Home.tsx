@@ -332,7 +332,7 @@ export function Home() {
                   fontSize: "0.95rem",
                 }}
               >
-                Good research goes beyond just describing the problem - it helps reframe it.
+                Good research is the key to building products that support natural human behavior.
                 I use mixed methods to build a
                 complete picture, then distill it into insights
                 that product teams can actually act on.
