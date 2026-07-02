@@ -115,11 +115,9 @@ export function Home() {
                   color: "#bbb",
                 }}
               >
-                I'm Casey Judge - a UX Researcher with over 8
-                years of experience in film and immersive
-                entertainment. I excel at turning natural human behavior
-                into clear design direction for innovative
-                tooling.
+                Hi, I'm Casey Judge! I'm a UX Researcher with over 8
+                years of experience working in film and immersive
+                entertainment. I build innovative tools that support human creativity.
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <Link
