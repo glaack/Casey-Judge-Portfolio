@@ -35,8 +35,8 @@ export function Home() {
         <div
           className="absolute pointer-events-none"
           style={{
-            width: "600px",
-            height: "600px",
+            width: "750px",
+            height: "750px",
             borderRadius: "50%",
             background:
               "radial-gradient(circle, rgba(91,191,69,0.22) 0%, transparent 70%)",
@@ -334,7 +334,7 @@ export function Home() {
                   fontSize: "0.95rem",
                 }}
               >
-                Good research goes beyond just describing the problem - it helps to reframe it.
+                Good research goes beyond just describing the problem - it helps reframe it.
                 I use mixed methods to build a
                 complete picture, then distill it into insights
                 that product teams can actually act on.
