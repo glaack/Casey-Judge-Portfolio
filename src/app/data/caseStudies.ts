@@ -23,6 +23,26 @@ import results21Response from "../../imports/results-2.1.png";
 import unseenImage36 from "../../imports/Image_36.png";
 import unseenNotes1 from "../../imports/notes_1.png";
 import unseenNotes2 from "../../imports/notes_2.png";
+import huntAKiller from "../../imports/Hunt-A-Killer.png";
+import umMindMap from "../../imports/UM-MindMap.png";
+import umDyatlov1 from "../../imports/UM-Dyatlov-1.png";
+import umDyatlov2 from "../../imports/UM-Dyatlov-2.png";
+import umEvent1 from "../../imports/UM-Event-1.png";
+import umEvent2 from "../../imports/UM-Event-2.png";
+import umEvent3 from "../../imports/UM-Event-3.png";
+import umEvent4 from "../../imports/UM-Event-4.png";
+import umEnvelope from "../../imports/UM-Envelope.jpg";
+import umScrambled from "../../imports/UM-full_scrambled_reduced.png";
+import umUnscrambled from "../../imports/UM-full_unscrambled_reduced.png";
+import umTabletopAR1 from "../../imports/UM-TabletopAR1.png";
+import umTabletopAR2 from "../../imports/UM-TabletopAR2.png";
+import umTabletopAR3 from "../../imports/UM-TabletopAR3.png";
+import umTabletopAR4 from "../../imports/UM-TabletopAR4.png";
+import umAR1 from "../../imports/UM-AR-1.png";
+import umAR2 from "../../imports/UM-AR-2.png";
+import umAR3 from "../../imports/UM-AR-3.png";
+import umInstagram from "../../imports/instagram.png";
+import umAgentPortal from "../../imports/agent-portal.png";
 
 // Local image imports for Pedesis case study
 import pededisLogo from "../../imports/Pedesis-logo-final.png";
@@ -369,7 +389,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         type: "image",
-        url: "https://images.unsplash.com/photo-1708863828286-63b56b08f292?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxteXN0ZXJ5JTIwYm9hcmQlMjBnYW1lJTIwc3Vic2NyaXB0aW9uJTIwYm94JTIwY29udGVudHN8ZW58MXx8fHwxNzgyMzM0MTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        url: huntAKiller,
         caption: "Hunt A Killer subscription box game pieces",
         layout: "full",
       },
@@ -394,8 +414,8 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "image-grid",
         images: [
-          { url: "https://images.unsplash.com/photo-1598520106830-8c45c2035460?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5kJTIwbWFwJTIwZGlhZ3JhbSUyMHdoaXRlYm9hcmQlMjBwbGFubmluZ3xlbnwxfHx8fDE3ODIzMzQyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "Mind map — Dyatlov story paths and puzzle connections" },
-          { url: "https://images.unsplash.com/photo-1676651471150-0e3a5f8de05e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1lJTIwcHJvdG90eXBlJTIwcGllY2VzJTIwdGFibGV0b3B8ZW58MXx8fHwxNzgyMzM0MjAzfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "Early Dyatlov Files physical game piece prototypes" },
+          { url: umMindMap, caption: "Mind map — Dyatlov story paths and puzzle connections" },
+          { url: umDyatlov1, caption: "Early Dyatlov Files physical game piece prototypes" },
         ],
         columns: 2,
       },
@@ -418,8 +438,8 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "image-grid",
         images: [
-          { url: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwc3RhcnR1cCUyMGRlbW8lMjBldmVudCUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3ODIzMzQyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "Demo session at RLab, Brooklyn Navy Yard" },
-          { url: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHx0ZWNoJTIwc3RhcnR1cCUyMGRlbW8lMjBldmVudCUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3ODIzMzQyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "Demo session at R/GA Hudson Yards office" },
+          { url: umEvent4, caption: "Demo session at RLab, Brooklyn Navy Yard" },
+          { url: umEvent3, caption: "Demo session at R/GA Hudson Yards office" },
         ],
         columns: 2,
       },
@@ -441,8 +461,8 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "image-grid",
         images: [
-          { url: "https://images.unsplash.com/photo-1649019489428-70f505daacd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxteXN0ZXJ5JTIwZW52ZWxvcGUlMjBkb2N1bWVudHMlMjBsZXR0ZXJzJTIwc3ByZWFkfGVufDF8fHx8MTc4MjMzNDIwMnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Dyatlov Files — outer envelope" },
-          { url: "https://images.unsplash.com/photo-1648994605501-fe0a391d2653?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxteXN0ZXJ5JTIwZW52ZWxvcGUlMjBkb2N1bWVudHMlMjBsZXR0ZXJzJTIwc3ByZWFkfGVufDF8fHx8MTc4MjMzNDIwMnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Dyatlov Files — box contents spread on tabletop" },
+          { url: umEnvelope, caption: "Dyatlov Files — outer envelope" },
+          { url: umDyatlov2, caption: "Dyatlov Files — box contents spread on tabletop" },
         ],
         columns: 2,
       },
@@ -458,23 +478,23 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "image-grid",
         images: [
-          { url: "https://images.unsplash.com/photo-1495549115977-ca0a18c9f6a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "AR app — scanning scrambled documents" },
-          { url: "https://images.unsplash.com/photo-1455762279210-ae6b56c7ad7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "AR app — documents unscrambled" },
+          { url: umScrambled, caption: "AR app — scanning scrambled documents" },
+          { url: umUnscrambled, caption: "AR app — documents unscrambled" },
         ],
         columns: 2,
       },
       {
         type: "image-grid",
         images: [
-          { url: "https://images.unsplash.com/photo-1541081006231-baeef8268bd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "iPhone AR scan — step 1" },
-          { url: "https://images.unsplash.com/photo-1495549115977-ca0a18c9f6a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "iPhone AR scan — step 2" },
-          { url: "https://images.unsplash.com/photo-1455762279210-ae6b56c7ad7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "iPhone AR scan — step 3" },
+          { url: umTabletopAR1, caption: "iPhone AR scan — step 1" },
+          { url: umTabletopAR2, caption: "iPhone AR scan — step 2" },
+          { url: umTabletopAR3, caption: "iPhone AR scan — step 3" },
         ],
         columns: 3,
       },
       {
         type: "image",
-        url: "https://images.unsplash.com/photo-1541081006231-baeef8268bd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+        url: umTabletopAR4,
         caption: "iPhone AR scan — step 4 (revealed content)",
         layout: "half",
       },
@@ -490,17 +510,17 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "image-grid",
         images: [
-          { url: "https://images.unsplash.com/photo-1495549115977-ca0a18c9f6a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Crime scene reconstruction AR — scan recognized" },
-          { url: "https://images.unsplash.com/photo-1455762279210-ae6b56c7ad7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Crime scene reconstruction AR — tap to place" },
-          { url: "https://images.unsplash.com/photo-1541081006231-baeef8268bd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwc21hcnRwaG9uZSUyMHNjYW5uaW5nfGVufDF8fHx8MTc4MjMzNDIwMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Crime scene reconstruction AR — 3D model placed" },
+          { url: umAR1, caption: "Crime scene reconstruction AR — scan recognized" },
+          { url: umAR2, caption: "Crime scene reconstruction AR — tap to place" },
+          { url: umAR3, caption: "Crime scene reconstruction AR — 3D model placed" },
         ],
         columns: 3,
       },
       {
         type: "image-grid",
         images: [
-          { url: "https://images.unsplash.com/photo-1686061592689-312bbfb5c055?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBhcHAlMjBkYXNoYm9hcmQlMjBpbnRlcmZhY2UlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc4MjMzNDIwM3ww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Instagram profile — Angelica Greenstone (fictional character)" },
-          { url: "https://images.unsplash.com/photo-1763718528755-4bca23f82ac3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHx3ZWIlMjBhcHAlMjBkYXNoYm9hcmQlMjBpbnRlcmZhY2UlMjBzY3JlZW5zaG90fGVufDF8fHx8MTc4MjMzNDIwM3ww&ixlib=rb-4.1.0&q=80&w=1080", caption: "DSF Agency Agent Portal web interface" },
+          { url: umInstagram, caption: "Instagram profile — Angelica Greenstone (fictional character)" },
+          { url: umAgentPortal, caption: "DSF Agency Agent Portal web interface" },
         ],
         columns: 2,
       },
@@ -527,8 +547,8 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "image-grid",
         images: [
-          { url: "https://images.unsplash.com/photo-1725109900649-fba28ac508fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxib2FyZCUyMGdhbWUlMjBjb252ZW50aW9uJTIwZGlzcGxheSUyMHRhYmxlfGVufDF8fHx8MTc4MjMzNDIwNHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "Unseen Media demo table — Halloween Play 2019" },
-          { url: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwc3RhcnR1cCUyMGRlbW8lMjBldmVudCUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3ODIzMzQyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "Wider demo area — Halloween Play 2019" },
+          { url: umEvent1, caption: "Unseen Media demo table — Halloween Play 2019" },
+          { url: umEvent2, caption: "Wider demo area — Halloween Play 2019" },
         ],
         columns: 2,
       },
@@ -543,7 +563,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         type: "image",
-        url: "https://images.unsplash.com/photo-1676482721054-59f8326cd1d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxnYW1lJTIwcHJvdG90eXBlJTIwcGllY2VzJTIwdGFibGV0b3B8ZW58MXx8fHwxNzgyMzM0MjAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+        url: unseenImage36,
         caption: "Final Charlotte Depsi mystery box contents",
         layout: "full",
       },
