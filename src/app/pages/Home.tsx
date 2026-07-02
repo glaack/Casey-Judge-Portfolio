@@ -107,9 +107,9 @@ export function Home() {
 
           {/* Sub-info row */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <div className="max-w-lg">
+            <div className="max-w-2xl">
               <p
-                className="text-base leading-relaxed mb-6"
+                className="text-base leading-relaxed mb-16"
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",
                   color: "#bbb",
@@ -167,7 +167,7 @@ export function Home() {
             </div>
 
             {/* Stats */}
-            <div className="hidden lg:flex items-center gap-6 sm:gap-8 md:gap-12 mt-8 md:mt-0">
+            <div className="hidden lg:flex items-center gap-6 md:gap-8 mt-8 md:mt-16 ml-auto">
               {[
                 { value: "40+", label: "Studies Conducted" },
                 { value: "8+", label: "Years Experience" },
@@ -334,8 +334,8 @@ export function Home() {
                   fontSize: "0.95rem",
                 }}
               >
-                Good research doesn't describe the problem — it
-                reframes it. I use mixed methods to build a
+                Good research goes beyond just describing the problem - it helps to reframe it.
+                I use mixed methods to build a
                 complete picture, then distill it into insights
                 that product teams can actually act on.
               </p>
