@@ -74,6 +74,7 @@ export type SectionType =
       columns?: 2 | 3;
       layout?: "default" | "device";
       imageHeight?: string;
+      widths?: string[];
     }
   | {
       type: "callout";
@@ -442,6 +443,7 @@ export const caseStudies: CaseStudy[] = [
           { url: umEvent3, caption: "Demo session at R/GA Hudson Yards office" },
         ],
         columns: 2,
+        widths: ["35%", "65%"],
       },
       { type: "divider" },
       {

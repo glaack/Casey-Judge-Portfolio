@@ -171,7 +171,7 @@ function SectionRenderer({ section, index }: { section: SectionType; index: numb
       return (
         <div className="my-12 flex flex-col md:flex-row items-end gap-6" key={index}>
           {section.images.map((img, i) => (
-            <div key={i} className={`flex flex-col w-full ${colWidth}`}>
+            <div key={i} className={`flex flex-col w-full ${section.widths ? "" : colWidth}`} style={section.widths ? { width: section.widths[i] } : {}}>
               <div
                 className="w-full overflow-hidden"
                 style={{ backgroundColor: "#0e0e0e", border: "1px solid #333", ...(section.imageHeight ? { height: section.imageHeight } : {}) }}
