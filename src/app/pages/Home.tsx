@@ -12,7 +12,7 @@ export function Home() {
     >
       {/* ── HERO ── */}
       <section
-        className="relative flex flex-col justify-end overflow-hidden pb-24 md:pb-32 pt-4 md:pt-20"
+        className="relative flex flex-col justify-end overflow-hidden pb-24 md:pb-32 pt-4 md:pt-44"
         style={{ minHeight: "85vh" }}
       >
         {/* Background texture grid */}
@@ -46,22 +46,7 @@ export function Home() {
         />
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-10 w-full">
-          {/* Eyebrow */}
-          <div className="flex items-center gap-3 mb-6 md:mb-8">
-            <span
-              className="text-xs tracking-[0.3em] uppercase"
-              style={{
-                fontFamily: "'Space Mono', monospace",
-                background:
-                  "linear-gradient(135deg, #4AA83C, #6FD159)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Casey Judge — Portfolio
-            </span>
-          </div>
+
 
           {/* Main headline */}
           <div className="mb-6 md:mb-8 overflow-hidden">
@@ -70,7 +55,7 @@ export function Home() {
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
                 color: "#f5f5f5",
-                fontSize: "clamp(2.5rem, 8vw, 6.5rem)",
+                fontSize: "clamp(2.5rem, 9vw, 8rem)",
                 fontWeight: 700,
                 letterSpacing: "-0.02em",
               }}
@@ -83,7 +68,7 @@ export function Home() {
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",
                   color: "#f5f5f5",
-                  fontSize: "clamp(2.5rem, 8vw, 6.5rem)",
+                  fontSize: "clamp(2.5rem, 9vw, 8rem)",
                   fontWeight: 700,
                   letterSpacing: "-0.02em",
                 }}
@@ -111,7 +96,7 @@ export function Home() {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
-                fontSize: "clamp(2.5rem, 8vw, 6.5rem)",
+                fontSize: "clamp(2.5rem, 9vw, 8rem)",
                 fontWeight: 700,
                 letterSpacing: "-0.02em",
               }}
@@ -130,8 +115,8 @@ export function Home() {
                   color: "#bbb",
                 }}
               >
-                I'm Casey Judge — a UX Researcher with over 8
-                years of experience in film & immersive
+                I'm Casey Judge - a UX Researcher with over 8
+                years of experience in film and immersive
                 entertainment. I excel at turning natural human behavior
                 into clear design direction for innovative
                 tooling.
@@ -466,7 +451,7 @@ export function Home() {
             backgroundClip: "text",
           }}
         >
-          Available for Contract & Full-Time
+          Available for Collaboration
         </div>
         <h2
           className="uppercase mb-8"

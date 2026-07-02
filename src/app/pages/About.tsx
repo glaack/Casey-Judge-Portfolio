@@ -206,7 +206,7 @@ export function About() {
                 color: "#080808",
               }}
             >
-              Get in Touch
+              Shoot me an Email
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
