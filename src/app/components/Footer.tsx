@@ -30,7 +30,9 @@ export function Footer() {
             </a>
             <span style={{ color: "#666" }}>•</span>
             <a
-              href="#"
+              href="https://linkedin.com/in/acacia-judge"
+              target="_blank"
+              rel="noopener noreferrer"
               className="transition-colors duration-200"
               style={{ color: "#666" }}
               onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#5BBF45")}
