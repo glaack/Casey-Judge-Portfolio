@@ -327,7 +327,8 @@ export function CaseStudyDetail() {
 
   const sessionKey = `unlocked-${id}`;
   const [unlocked, setUnlocked] = useState(
-    !study?.password || sessionStorage.getItem(sessionKey) === "true"
+    !study?.password ||
+      (typeof window !== "undefined" && sessionStorage.getItem(sessionKey) === "true")
   );
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);

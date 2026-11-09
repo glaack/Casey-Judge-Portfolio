@@ -1,1 +1,4 @@
 .claude/launch.json
+dist-ssr
+dist
+.DS_Store

@@ -1,4 +1,6 @@
-import { createBrowserRouter, Outlet } from "react-router";
+import { Outlet, useLocation, type RouteObject } from "react-router";
+import { useEffect } from "react";
+import { canonicalUrl, getRouteMeta } from "./seo";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
@@ -6,11 +8,35 @@ import { Work } from "./pages/Work";
 import { CaseStudyDetail } from "./pages/CaseStudyDetail";
 import { About } from "./pages/About";
 
+function setMeta(selector: string, attr: string, value: string) {
+  const el = document.head.querySelector(selector);
+  if (el) el.setAttribute(attr, value);
+}
+
+/** Keeps the title, description and canonical URL in sync on client-side navigation. */
+function HeadSync() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    const meta = getRouteMeta(pathname);
+    const url = canonicalUrl(meta.path);
+    document.title = meta.title;
+    setMeta('meta[name="description"]', "content", meta.description);
+    setMeta('link[rel="canonical"]', "href", url);
+    setMeta('meta[property="og:url"]', "content", url);
+    setMeta('meta[property="og:title"]', "content", meta.title);
+    setMeta('meta[property="og:description"]', "content", meta.description);
+    setMeta('meta[name="twitter:title"]', "content", meta.title);
+    setMeta('meta[name="twitter:description"]', "content", meta.description);
+  }, [pathname]);
+  return null;
+}
+
 function Root() {
   return (
     <div
       style={{ backgroundColor: "#080808", minHeight: "100vh" }}
     >
+      <HeadSync />
       <Navbar />
       <Outlet />
       <Footer />
@@ -75,7 +101,7 @@ function NotFound() {
   );
 }
 
-export const router = createBrowserRouter([
+export const routes: RouteObject[] = [
   {
     path: "/",
     Component: Root,
@@ -87,4 +113,4 @@ export const router = createBrowserRouter([
       { path: "*", Component: NotFound },
     ],
   },
-]);
+];

@@ -20,7 +20,7 @@ export function Footer() {
           </span>
           <div className="flex items-center gap-4 text-xs" style={{ fontFamily: "'Space Mono', monospace" }}>
             <a
-              href="mailto:placeholder@framework.co"
+              href="mailto:chicory-samba-0x@icloud.com"
               className="transition-colors duration-200"
               style={{ color: "#666" }}
               onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#5BBF45")}
