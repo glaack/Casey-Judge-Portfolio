@@ -295,9 +295,9 @@ export function Home() {
                   lineHeight: 1.1,
                 }}
               >
-                Research as Direction,
+                From Observation
                 <br />
-                Not Documentation
+                to Direction
               </h2>
               <p
                 className="leading-relaxed mb-8"
@@ -307,10 +307,9 @@ export function Home() {
                   fontSize: "0.95rem",
                 }}
               >
-                Good research is the key to building products that support natural human behavior.
-                I use mixed methods to build a
-                complete picture, then distill it into insights
-                that product teams can actually act on.
+                I watch how people work, ask the right questions, and
+                measure what matters. Then I distill it into a clear point
+                of view that helps teams build better tools.
               </p>
               <Link
                 to="/about#toolkit"
@@ -355,7 +354,7 @@ export function Home() {
                 {
                   num: "03",
                   title: "Development",
-                  desc: "Finding the signal in the noise through rigorous analysis and collaborative sensemaking.",
+                  desc: "Refining ideas through iterative prototyping and rigorous testing with real users.",
                 },
                 {
                   num: "04",
