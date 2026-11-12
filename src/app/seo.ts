@@ -4,7 +4,7 @@ export const SITE_URL = "https://www.caseyjudge.com";
 export const SITE_NAME = "Casey Judge";
 
 const DEFAULT_DESCRIPTION =
-  "Casey Judge is a UX Researcher with 8+ years of experience in film and immersive entertainment, turning human behavior into clear design direction for innovative tools.";
+  "Casey Judge is a Senior UX Researcher with 8+ years of experience in film and immersive entertainment, turning human behavior into clear design direction for innovative tools.";
 
 export interface RouteMeta {
   title: string;
@@ -19,14 +19,14 @@ export function getRouteMeta(pathname: string): RouteMeta {
   if (path === "/") {
     return {
       path: "/",
-      title: "Casey Judge — UX Researcher",
+      title: "Casey Judge — Senior UX Researcher",
       description: DEFAULT_DESCRIPTION,
     };
   }
   if (path === "/work") {
     return {
       path: "/work",
-      title: "Work — Casey Judge, UX Researcher",
+      title: "Work — Casey Judge, Senior UX Researcher",
       description:
         "UX research case studies by Casey Judge: VFX software, augmented reality tabletop gaming, the uncanny valley, and more.",
     };
@@ -34,9 +34,9 @@ export function getRouteMeta(pathname: string): RouteMeta {
   if (path === "/about") {
     return {
       path: "/about",
-      title: "About Casey Judge — Senior Design Researcher",
+      title: "About Casey Judge — Senior UX Researcher",
       description:
-        "Casey Judge is a Senior Design Researcher at Wētā FX and an adjunct professor at New York University, based in Brooklyn, NY.",
+        "Casey Judge is a Senior UX Researcher at Wētā FX and an adjunct professor at New York University, based in Brooklyn, NY.",
     };
   }
   const match = path.match(/^\/work\/([^/]+)$/);
@@ -45,7 +45,7 @@ export function getRouteMeta(pathname: string): RouteMeta {
     return {
       path,
       title: `${study.title} — Casey Judge`,
-      description: `${study.subtitle}. A ${study.medium.toLowerCase()} case study by UX Researcher Casey Judge.`,
+      description: `${study.subtitle}. A ${study.medium.toLowerCase()} case study by Senior UX Researcher Casey Judge.`,
     };
   }
   return { path, title: "Page Not Found — Casey Judge", description: DEFAULT_DESCRIPTION };
@@ -69,7 +69,7 @@ export const personJsonLd = {
   name: "Casey Judge",
   alternateName: "Acacia Judge",
   url: `${SITE_URL}/`,
-  jobTitle: "Senior Design Researcher",
+  jobTitle: "Senior UX Researcher",
   description: DEFAULT_DESCRIPTION,
   worksFor: { "@type": "Organization", name: "Wētā FX", url: "https://www.wetafx.co.nz/" },
   affiliation: {

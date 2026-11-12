@@ -578,7 +578,7 @@ export const caseStudies: CaseStudy[] = [
     imageUrl: pededisDesktop,
     accentColor: "#5BBF45",
     tags: ["UX Research", "E-Commerce", "Healthcare"],
-    featured: true,
+    featured: false,
     sections: [
       {
         type: "image",

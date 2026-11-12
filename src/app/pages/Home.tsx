@@ -12,8 +12,8 @@ export function Home() {
     >
       {/* ── HERO ── */}
       <section
-        className="relative flex flex-col justify-end overflow-hidden pb-24 md:pb-32 pt-4 md:pt-44"
-        style={{ minHeight: "85vh" }}
+        className="relative flex flex-col justify-center overflow-hidden py-24 md:py-28"
+        style={{ minHeight: "100svh" }}
       >
         {/* Background texture grid */}
         <div
@@ -31,17 +31,51 @@ export function Home() {
           style={{ backgroundColor: "transparent" }}
         ></div>
 
-        {/* Lime glow */}
+        {/* Projector light: spills in from off-screen top right */}
         <div
-          className="absolute pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            width: "750px",
-            height: "750px",
-            borderRadius: "50%",
+            background: [
+              // lime core
+              "radial-gradient(ellipse 70% 90% at 92% 8%, rgba(111,209,89,0.26) 0%, rgba(91,191,69,0.17) 20%, rgba(74,168,60,0.09) 40%, rgba(74,168,60,0.03) 60%, transparent 80%)",
+              // deeper green-teal underlayer for depth
+              "radial-gradient(ellipse 100% 120% at 90% 10%, rgba(28,92,72,0.28) 0%, rgba(20,70,55,0.10) 45%, transparent 75%)",
+            ].join(", "),
+          }}
+        />
+
+        {/* Grid lines catch the light */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(140,230,120,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(140,230,120,0.07) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+            maskImage:
+              "radial-gradient(ellipse 70% 90% at 92% 8%, black 0%, rgba(0,0,0,0.4) 40%, transparent 78%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 70% 90% at 92% 8%, black 0%, rgba(0,0,0,0.4) 40%, transparent 78%)",
+          }}
+        />
+
+        {/* Film grain: breaks up gradient banding */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+            opacity: 0.06,
+            mixBlendMode: "overlay",
+          }}
+        />
+
+        {/* Top scrim: keeps the nav legible over the light */}
+        <div
+          className="absolute top-0 left-0 right-0 pointer-events-none"
+          style={{
+            height: "160px",
             background:
-              "radial-gradient(circle, rgba(91,191,69,0.22) 0%, transparent 70%)",
-            top: "10%",
-            right: "-100px",
+              "linear-gradient(to bottom, rgba(8,8,8,0.7) 0%, rgba(8,8,8,0.45) 45%, transparent 100%)",
           }}
         />
 
@@ -90,7 +124,7 @@ export function Home() {
                   color: "#bbb",
                 }}
               >
-                Hi, I'm Casey Judge! I'm a UX Researcher with over 8
+                Hi, I'm Casey Judge! I'm a Senior UX Researcher with over 8
                 years of experience working in film and immersive
                 entertainment. I build innovative tools that support human creativity.
               </p>
@@ -139,40 +173,6 @@ export function Home() {
               </div>
             </div>
 
-            {/* Stats */}
-            <div className="hidden lg:flex items-center gap-6 md:gap-8 mt-8 md:mt-16 ml-auto">
-              {[
-                { value: "40+", label: "Studies Conducted" },
-                { value: "8+", label: "Years Experience" },
-                { value: "12", label: "Products Shipped" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-left hidden lg:block">
-                  <div
-                    className="text-3xl md:text-4xl"
-                    style={{
-                      fontFamily: "'Space Grotesk', sans-serif",
-                      background:
-                        "linear-gradient(135deg, #4AA83C, #6FD159)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                      fontWeight: 700,
-                    }}
-                  >
-                    {stat.value}
-                  </div>
-                  <div
-                    className="text-xs tracking-widest uppercase mt-1"
-                    style={{
-                      fontFamily: "'Space Mono', monospace",
-                      color: "#777",
-                    }}
-                  >
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 

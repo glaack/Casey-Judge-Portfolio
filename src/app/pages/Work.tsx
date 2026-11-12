@@ -40,7 +40,7 @@ export function Work() {
               lineHeight: 0.95,
             }}
           >
-            Previous <span style={{ background: "linear-gradient(135deg, #4AA83C, #6FD159)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Work</span>
+            Selected <span style={{ background: "linear-gradient(135deg, #4AA83C, #6FD159)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Work</span>
           </h1>
         </div>
 
