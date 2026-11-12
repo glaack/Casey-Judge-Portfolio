@@ -80,37 +80,35 @@ export function Home() {
         />
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-10 w-full">
-
-
-          {/* Main headline */}
+          {/* Main headline
+              Phone:   RESEARCHING / THE HUMAN / EXPERIENCE
+              sm and up: RESEARCHING THE / HUMAN EXPERIENCE */}
           <div className="mb-6 md:mb-8 overflow-hidden">
             <h1
               className="uppercase leading-[0.9]"
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
                 color: "#f5f5f5",
-                fontSize: "clamp(2.5rem, 7.5vw, 7rem)",
+                fontSize: "clamp(2.25rem, 6.5vw, 5.5rem)",
                 fontWeight: 700,
                 letterSpacing: "-0.02em",
               }}
             >
-              Researching the
-            </h1>
-            <h1
-              className="uppercase leading-[0.9]"
-              style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                background:
-                  "linear-gradient(135deg, #4AA83C, #6FD159)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                fontSize: "clamp(2.5rem, 7.5vw, 7rem)",
-                fontWeight: 700,
-                letterSpacing: "-0.02em",
-              }}
-            >
-              Human Experience
+              Researching <br className="sm:hidden" />
+              the <br className="hidden sm:inline" />
+              <span
+                style={{
+                  background: "linear-gradient(135deg, #4AA83C, #6FD159)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  WebkitBoxDecorationBreak: "clone",
+                  boxDecorationBreak: "clone",
+                }}
+              >
+                Human <br className="sm:hidden" />
+                Experience
+              </span>
             </h1>
           </div>
 
