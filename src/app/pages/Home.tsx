@@ -347,7 +347,7 @@ export function Home() {
                 {
                   num: "02",
                   title: "Definition",
-                  desc: "Qualitative and quantitative methods chosen to match the question, not a template.",
+                  desc: "Qualitative and quantitative methods chosen to thoroughly explore the problem space.",
                 },
                 {
                   num: "03",
